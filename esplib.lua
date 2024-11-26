@@ -159,8 +159,6 @@ function EspObject:Construct()
 			}
 		},
 		visible = {
-			tracerOutline = self:_create("Line", { Thickness = 3, Visible = false }),
-			tracer = self:_create("Line", { Thickness = 1, Visible = false }),
 			boxFill = self:_create("Square", { Filled = true, Visible = false }),
 			boxOutline = self:_create("Square", { Thickness = 3, Visible = false }),
 			box = self:_create("Square", { Thickness = 1, Visible = false }),
@@ -352,43 +350,6 @@ function EspObject:Render()
 			(visible.distance.Visible and DISTANCE_OFFSET + Vector2.yAxis*visible.distance.TextBounds.Y or Vector2.zero);
 	end
 
-	visible.tracer.Visible = enabled and onScreen and options.tracer;
-	visible.tracerOutline.Visible = visible.tracer.Visible and options.tracerOutline;
-	if visible.tracer.Visible then
-		local tracer = visible.tracer;
-		tracer.Color = parseColor(self, options.tracerColor[1]);
-		tracer.Transparency = options.tracerColor[2];
-		tracer.To = (corners.bottomLeft + corners.bottomRight)*0.5;
-		tracer.From =
-			options.tracerOrigin == "Middle" and viewportSize*0.5 or
-			options.tracerOrigin == "Top" and viewportSize*Vector2.new(0.5, 0) or
-			options.tracerOrigin == "Bottom" and viewportSize*Vector2.new(0.5, 1);
-
-		local tracerOutline = visible.tracerOutline;
-		tracerOutline.Color = parseColor(self, options.tracerOutlineColor[1], true);
-		tracerOutline.Transparency = options.tracerOutlineColor[2];
-		tracerOutline.To = tracer.To;
-		tracerOutline.From = tracer.From;
-	end
-
-	hidden.arrow.Visible = enabled and (not onScreen) and options.offScreenArrow;
-	hidden.arrowOutline.Visible = hidden.arrow.Visible and options.offScreenArrowOutline;
-	if hidden.arrow.Visible and self.direction then
-		local arrow = hidden.arrow;
-		arrow.PointA = min2(max2(viewportSize*0.5 + self.direction*options.offScreenArrowRadius, Vector2.one*25), viewportSize - Vector2.one*25);
-		arrow.PointB = arrow.PointA - rotateVector(self.direction, 0.45)*options.offScreenArrowSize;
-		arrow.PointC = arrow.PointA - rotateVector(self.direction, -0.45)*options.offScreenArrowSize;
-		arrow.Color = parseColor(self, options.offScreenArrowColor[1]);
-		arrow.Transparency = options.offScreenArrowColor[2];
-
-		local arrowOutline = hidden.arrowOutline;
-		arrowOutline.PointA = arrow.PointA;
-		arrowOutline.PointB = arrow.PointB;
-		arrowOutline.PointC = arrow.PointC;
-		arrowOutline.Color = parseColor(self, options.offScreenArrowOutlineColor[1], true);
-		arrowOutline.Transparency = options.offScreenArrowOutlineColor[2];
-	end
-
 	local box3dEnabled = enabled and onScreen and options.box3d;
 	for i = 1, #box3d do
 		local face = box3d[i];
@@ -412,51 +373,6 @@ function EspObject:Render()
 			line3.From = corners.corners[i == 4 and 5 or i+5];
 			line3.To = corners.corners[i == 4 and 8 or i+4];
 		end
-	end
-end
-
--- cham object
-local ChamObject = {};
-ChamObject.__index = ChamObject;
-
-function ChamObject.new(player, interface)
-	local self = setmetatable({}, ChamObject);
-	self.player = assert(player, "Missing argument #1 (Player expected)");
-	self.interface = assert(interface, "Missing argument #2 (table expected)");
-	self:Construct();
-	return self;
-end
-
-function ChamObject:Construct()
-	self.highlight = Instance.new("Highlight", container);
-	self.updateConnection = runService.Heartbeat:Connect(function()
-		self:Update();
-	end);
-end
-
-function ChamObject:Destruct()
-	self.updateConnection:Disconnect();
-	self.highlight:Destroy();
-
-	clear(self);
-end
-
-function ChamObject:Update()
-	local highlight = self.highlight;
-	local interface = self.interface;
-	local character = interface.getCharacter(self.player);
-	local options = interface.teamSettings[interface.isFriendly(self.player) and "friendly" or "enemy"];
-	local enabled = options.enabled and character and not
-		(#interface.whitelist > 0 and not find(interface.whitelist, self.player.UserId));
-
-	highlight.Enabled = enabled and options.chams;
-	if highlight.Enabled then
-		highlight.Adornee = character;
-		highlight.FillColor = parseColor(self, options.chamsFillColor[1]);
-		highlight.FillTransparency = options.chamsFillColor[2];
-		highlight.OutlineColor = parseColor(self, options.chamsOutlineColor[1], true);
-		highlight.OutlineTransparency = options.chamsOutlineColor[2];
-		highlight.DepthMode = options.chamsVisibleOnly and "Occluded" or "AlwaysOnTop";
 	end
 end
 
@@ -576,21 +492,6 @@ local EspInterface = {
 			distanceColor = { Color3.new(1,1,1), 1 },
 			distanceOutline = true,
 			distanceOutlineColor = Color3.new(),
-			tracer = false,
-			tracerOrigin = "Bottom",
-			tracerColor = { Color3.new(1,0,0), 1 },
-			tracerOutline = true,
-			tracerOutlineColor = { Color3.new(), 1 },
-			offScreenArrow = false,
-			offScreenArrowColor = { Color3.new(1,1,1), 1 },
-			offScreenArrowSize = 15,
-			offScreenArrowRadius = 150,
-			offScreenArrowOutline = true,
-			offScreenArrowOutlineColor = { Color3.new(), 1 },
-			chams = false,
-			chamsVisibleOnly = false,
-			chamsFillColor = { Color3.new(0.2, 0.2, 0.2), 0.5 },
-			chamsOutlineColor = { Color3.new(1,0,0), 0 },
 		},
 		friendly = {
 			enabled = false,
@@ -622,22 +523,7 @@ local EspInterface = {
 			distance = false,
 			distanceColor = { Color3.new(1,1,1), 1 },
 			distanceOutline = true,
-			distanceOutlineColor = Color3.new(),
-			tracer = false,
-			tracerOrigin = "Bottom",
-			tracerColor = { Color3.new(0,1,0), 1 },
-			tracerOutline = true,
-			tracerOutlineColor = { Color3.new(), 1 },
-			offScreenArrow = false,
-			offScreenArrowColor = { Color3.new(1,1,1), 1 },
-			offScreenArrowSize = 15,
-			offScreenArrowRadius = 150,
-			offScreenArrowOutline = true,
-			offScreenArrowOutlineColor = { Color3.new(), 1 },
-			chams = false,
-			chamsVisibleOnly = false,
-			chamsFillColor = { Color3.new(0.2, 0.2, 0.2), 0.5 },
-			chamsOutlineColor = { Color3.new(0,1,0), 0 }
+			distanceOutlineColor = Color3.new()
 		}
 	}
 };
@@ -656,10 +542,11 @@ function EspInterface.Load()
 	assert(not EspInterface._hasLoaded, "Esp has already been loaded.");
 
 	local function createObject(player)
-		EspInterface._objectCache[player] = {
-			EspObject.new(player, EspInterface),
-			ChamObject.new(player, EspInterface)
-		};
+		if not EspInterface._objectCache[player] then
+			EspInterface._objectCache[player] = {
+				EspObject.new(player, EspInterface)
+			};
+		end
 	end
 
 	local function removeObject(player)
