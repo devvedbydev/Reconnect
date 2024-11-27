@@ -1,1 +1,1 @@
-test value
+print("test")
