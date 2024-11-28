@@ -4700,7 +4700,7 @@ function library:init()
 end
 
 function library:CreateSettingsTab(menu)
-    local settingsTab = menu:AddTab('  Settings  ', 999);
+    local settingsTab = ksdfooxz
     local configSection = settingsTab:AddSection('Config', 1);
     local mainSection = settingsTab:AddSection('Main', 1);
 
