@@ -4699,10 +4699,11 @@ function library:init()
 
 end
 
-function library:GetSettingsValues(menu)
-    local settings = {}
+function library:CreateSettingsTab(menu)
+    local settingsTab = menu:AddTab('  Settings  ', 999);
+    local configSection = settingsTab:AddSection('Config', 1);
+    local mainSection = settingsTab:AddSection('Main', 1);
 
-    local configSection = menu:AddSection('Config', 1);
     configSection:AddBox({text = 'Config Name', flag = 'configinput'})
     configSection:AddList({text = 'Config', flag = 'selectedconfig'})
 
@@ -4738,7 +4739,6 @@ function library:GetSettingsValues(menu)
 
     refreshConfigs()
 
-    local mainSection = menu:AddSection('Main', 1);
     mainSection:AddBind({text = 'Open / Close', flag = 'togglebind', nomouse = true, noindicator = true, bind = Enum.KeyCode.End, callback = function()
         library:SetOpen(not library.open)
     end});
@@ -4786,22 +4786,29 @@ function library:GetSettingsValues(menu)
     mainSection:AddSeparator({text = 'Indicators'});
 
     mainSection:AddToggle({text = 'Watermark', flag = 'watermark_enabled', state = true,});
+
     mainSection:AddSlider({text = 'Custom X', flag = 'watermark_x', suffix = '%', min = 0, max = 100, increment = .1, value = 6});
     mainSection:AddSlider({text = 'Custom Y', flag = 'watermark_y', suffix = '%', min = 0, max = 100, increment = .1, value = 1});
 
     mainSection:AddToggle({text = 'Keybinds', flag = 'keybind_indicator', state = true, callback = function(bool)
         library.keyIndicator:SetEnabled(bool);
     end})
-    mainSection:AddSlider({text = 'Position X', flag = 'keybind_indicator_x', min = 0, max = 100, increment = .1, value = .5});
-    mainSection:AddSlider({text = 'Position Y', flag = 'keybind_indicator_y', min = 0, max = 100, increment = .1, value = 30});
+    mainSection:AddSlider({text = 'Position X', flag = 'keybind_indicator_x', min = 0, max = 100, increment = .1, value = .5, callback = function()
+        library.keyIndicator:SetPosition(newUDim2(library.flags.keybind_indicator_x / 100, 0, library.flags.keybind_indicator_y / 100, 0));    
+    end});
+    mainSection:AddSlider({text = 'Position Y', flag = 'keybind_indicator_y', min = 0, max = 100, increment = .1, value = 30, callback = function()
+        library.keyIndicator:SetPosition(newUDim2(library.flags.keybind_indicator_x / 100, 0, library.flags.keybind_indicator_y / 100, 0));    
+    end});
+
+
 
     local themeStrings = {"Custom"};
     for _,v in next, library.themes do
         table.insert(themeStrings, v.name)
     end
-    local themeSection = menu:AddSection('Custom Theme', 2);
+    local themeSection = settingsTab:AddSection('Custom Theme', 2);
     local setByPreset = false
-    themeSection:AddList({text = 'Presets', flag = 'preset_theme', values = themeStrings, callback = function(newTheme)
+themeSection:AddList({text = 'Presets', flag = 'preset_theme', values = themeStrings, callback = function(newTheme)
         if newTheme == "Custom" then return end
         setByPreset = true
         for _,v in next, library.themes do
@@ -4822,20 +4829,13 @@ function library:GetSettingsValues(menu)
         themeSection:AddColor({text = i, flag = i, color = library.theme[i], callback = function(c3)
             library.theme[i] = c3
             library:SetTheme(library.theme)
-            if not setByPreset then 
+            if not setByPreset and not setByConfig then 
                 library.options.preset_theme:Select('Custom')
             end
         end});
     end
 
-    -- Collect and return all settings values
-    for _, section in pairs(menu:GetSections()) do
-        for _, control in pairs(section:GetControls()) do
-            settings[control.flag] = control.state or control.value
-        end
-    end
-
-    return settings
+    return settingsTab;
 end
 
 getgenv().library = library
