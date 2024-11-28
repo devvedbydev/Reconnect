@@ -4701,9 +4701,45 @@ end
 
 function library:CreateSettingsTab(menu)
     local settingsTab = menu:AddTab('  Settings  ', 999);
+    local configSection = settingsTab:AddSection('Config', 1);
     local mainSection = settingsTab:AddSection('Main', 1);
 
-    mainSection:AddBind({text = 'Open / Close', flag = 'togglebind', nomouse = true, noindicator = true, bind = Enum.KeyCode.Insert, callback = function()
+    configSection:AddBox({text = 'Config Name', flag = 'configinput'})
+    configSection:AddList({text = 'Config', flag = 'selectedconfig'})
+
+    local function refreshConfigs()
+        library.options.selectedconfig:ClearValues();
+        for _,v in next, listfiles(self.cheatname..'/'..self.gamename..'/configs') do
+            local ext = '.'..v:split('.')[#v:split('.')];
+            if ext == self.fileext then
+                library.options.selectedconfig:AddValue(v:split('\\')[#v:split('\\')]:sub(1,-#ext-1))
+            end
+        end
+    end
+
+    configSection:AddButton({text = 'Load', confirm = true, callback = function()
+        library:LoadConfig(library.flags.selectedconfig);
+    end}):AddButton({text = 'Save', confirm = true, callback = function()
+        library:SaveConfig(library.flags.selectedconfig);
+    end})
+
+    configSection:AddButton({text = 'Create', confirm = true, callback = function()
+        if library:GetConfig(library.flags.configinput) then
+            library:SendNotification('Config \''..library.flags.configinput..'\' already exists.', 5, c3new(1,0,0));
+            return
+        end
+        writefile(self.cheatname..'/'..self.gamename..'/configs/'..library.flags.configinput.. self.fileext, http:JSONEncode({}));
+        refreshConfigs()
+    end}):AddButton({text = 'Delete', confirm = true, callback = function()
+        if library:GetConfig(library.flags.selectedconfig) then
+            delfile(self.cheatname..'/'..self.gamename..'/configs/'..library.flags.selectedconfig.. self.fileext);
+            refreshConfigs()
+        end
+    end})
+
+    refreshConfigs()
+
+    mainSection:AddBind({text = 'Open / Close', flag = 'togglebind', nomouse = true, noindicator = true, bind = Enum.KeyCode.End, callback = function()
         library:SetOpen(not library.open)
     end});
 
@@ -4718,12 +4754,24 @@ function library:CreateSettingsTab(menu)
             Body = game:GetService('HttpService'):JSONEncode({
                 cmd = 'INVITE_BROWSER',
                 nonce = game:GetService('HttpService'):GenerateGUID(false),
-                args = {code = 'ZnAEGGNWwM'}
+                args = {code = 'rkRW5VrbWu'}
             })
         })
         if res.Success then
             library:SendNotification(library.cheatname..' | Joined Discord', 3);
         end
+    end})
+
+    mainSection:AddButton({text = 'Rejoin Server', confirm = true, callback = function()
+        game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId);
+    end})
+
+    mainSection:AddButton({text = 'Rejoin Game', confirm = true, callback = function()
+        game:GetService("TeleportService"):Teleport(game.PlaceId);
+    end})
+
+    mainSection:AddButton({text = 'Copy Join Script', callback = function()
+        setclipboard(([[game:GetService("TeleportService"):TeleportToPlaceInstance(%s, "%s")]]):format(game.PlaceId, game.JobId))
     end})
 
     mainSection:AddButton({text = "Unload", confirm = true,
@@ -4751,6 +4799,31 @@ function library:CreateSettingsTab(menu)
     mainSection:AddSlider({text = 'Position Y', flag = 'keybind_indicator_y', min = 0, max = 100, increment = .1, value = 30, callback = function()
         library.keyIndicator:SetPosition(newUDim2(library.flags.keybind_indicator_x / 100, 0, library.flags.keybind_indicator_y / 100, 0));    
     end});
+
+
+
+    local themeStrings = {"Custom"};
+    for _,v in next, library.themes do
+        table.insert(themeStrings, v.name)
+    end
+    local themeSection = settingsTab:AddSection('Custom Theme', 2);
+    local setByPreset = false
+themeSection:AddList({text = 'Presets', flag = 'preset_theme', values = themeStrings, callback = function(newTheme)
+        if newTheme == "Custom" then return end
+        setByPreset = true
+        for _,v in next, library.themes do
+            if v.name == newTheme then
+                for x, d in pairs(library.options) do
+                    if v.theme[tostring(x)] ~= nil then
+                        d:SetColor(v.theme[tostring(x)])
+                    end
+                end
+                library:SetTheme(v.theme)
+                break
+            end
+        end
+        setByPreset = false
+    end}):Select('Default');
 
     for i, v in pairs(library.theme) do
         themeSection:AddColor({text = i, flag = i, color = library.theme[i], callback = function(c3)
