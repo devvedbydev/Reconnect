@@ -929,7 +929,7 @@ function library:init()
                 Position = newUDim2(0,13,0,2);
                 ThemeColor = 'Primary Text';
                 Text = message;
-                Outline = true;
+                Outline = false;
                 Font = 1;
                 Size = 16;
                 ZIndex = z+4;
@@ -1029,7 +1029,7 @@ function library:init()
                 Font = 1;
                 ZIndex = z+2;
                 Center = true;
-                Outline = true;
+                Outline = false;
                 Parent = objs.background;
             });
 
@@ -1109,7 +1109,7 @@ function library:init()
                     Size = 16;
                     Font = 1;
                     ZIndex = z+2;
-                    Outline = true;
+                    Outline = false;
                     Parent = objs.background;
                 });
 
@@ -1119,7 +1119,7 @@ function library:init()
                     Size = 16;
                     Font = 1;
                     ZIndex = z+2;
-                    Outline = true;
+                    Outline = false;
                     Parent = objs.background;
                 });
 
@@ -1282,7 +1282,7 @@ function library:init()
                 Font = 1;
                 Size = 16;
                 ZIndex = z+1;
-                Outline = true;
+                Outline = false;
                 Parent = objs.midBorder;
             })
 
@@ -1413,7 +1413,7 @@ function library:init()
                     ThemeColor = 'Option Text 1';
                     Size = 16;
                     Font = 1;
-                    Outline = true;
+                    Outline = false;
                     ZIndex = z+1;
                     Parent = objs.background;
                 })
@@ -1576,7 +1576,7 @@ function library:init()
                     Text = 'R';
                     Size = 16;
                     Font = 1;
-                    Outline = true;
+                    Outline = false;
                     Center = true;
                     ZIndex = z+6;
                     Parent = objs.rBackground;
@@ -1604,7 +1604,7 @@ function library:init()
                     Text = 'G';
                     Size = 16;
                     Font = 1;
-                    Outline = true;
+                    Outline = false;
                     Center = true;
                     ZIndex = z+6;
                     Parent = objs.gBackground;
@@ -1632,7 +1632,7 @@ function library:init()
                     Text = 'B';
                     Size = 16;
                     Font = 1;
-                    Outline = true;
+                    Outline = false;
                     Center = true;
                     ZIndex = z+6;
                     Parent = objs.bBackground;
@@ -1969,7 +1969,7 @@ function library:init()
                     Size = 16;
                     Font = 1;
                     ZIndex = z+1;
-                    Outline = true;
+                    Outline = false;
                     Center = true;
                     Parent = objs.background;
                 })
@@ -2169,7 +2169,7 @@ function library:init()
                             Size = 16;
                             Font = 1;
                             ZIndex = z+1;
-                            Outline = true;
+                            Outline = false;
                             Parent = objs.holder;
                         })
 
@@ -2663,7 +2663,7 @@ function library:init()
                                 Size = 16;
                                 Font = 1;
                                 ZIndex = z+5;
-                                Outline = true;
+                                Outline = false;
                                 Center = true;
                                 Parent = objs.background;
                             })
@@ -2835,7 +2835,7 @@ function library:init()
                                 Size = 16;
                                 Font = 1;
                                 ZIndex = z+5;
-                                Outline = true;
+                                Outline = false;
                                 Parent = objs.background;
                             })
     
@@ -2846,7 +2846,7 @@ function library:init()
                                 Size = 16;
                                 Font = 1;
                                 ZIndex = z+5;
-                                Outline = true;
+                                Outline = false;
                                 Parent = objs.background;
                             })
     
@@ -3037,7 +3037,7 @@ function library:init()
                             Size = 16;
                             Font = 1;
                             ZIndex = z+1;
-                            Outline = true;
+                            Outline = false;
                             Parent = objs.holder;
                         })
 
@@ -3065,7 +3065,7 @@ function library:init()
                             Font = 1;
                             ZIndex = z+4;
                             Center = true;
-                            Outline = true;
+                            Outline = false;
                             Parent = objs.plusDetector;
                         })
 
@@ -3077,7 +3077,7 @@ function library:init()
                             Font = 1;
                             ZIndex = z+4;
                             Center = true;
-                            Outline = true;
+                            Outline = false;
                             Parent = objs.minusDetector;
                         })
 
@@ -3267,7 +3267,7 @@ function library:init()
                             Size = 16;
                             Font = 1;
                             ZIndex = z+4;
-                            Outline = true;
+                            Outline = false;
                             Center = true;
                             Parent = objs.background;
                         })
@@ -3402,7 +3402,7 @@ function library:init()
                                 Size = 16;
                                 Font = 1;
                                 ZIndex = z+4;
-                                Outline = true;
+                                Outline = false;
                                 Center = true;
                                 Parent = objs.background;
                             })
@@ -3566,7 +3566,7 @@ function library:init()
                             Size = 16;
                             Font = 1;
                             ZIndex = z;
-                            Outline = true;
+                            Outline = false;
                             Center = true;
                             Parent = objs.holder;
                         })
@@ -3671,7 +3671,7 @@ function library:init()
                             Size = 16;
                             Font = 1;
                             ZIndex = z+1;
-                            Outline = true;
+                            Outline = false;
                             Parent = objs.holder;
                         })
 
@@ -3832,7 +3832,7 @@ function library:init()
                             Size = 16;
                             Font = 1;
                             ZIndex = z+1;
-                            Outline = true;
+                            Outline = false;
                             Parent = objs.holder;
                         })
 
@@ -3842,7 +3842,7 @@ function library:init()
                             Size = 16;
                             Font = 1;
                             ZIndex = z+5;
-                            Outline = true;
+                            Outline = false;
                             Parent = objs.background;
                         })
 
@@ -4028,7 +4028,7 @@ function library:init()
                             Size = 16;
                             Font = 1;
                             ZIndex = z+1;
-                            Outline = true;
+                            Outline = false;
                             Parent = objs.holder;
                         })
 
@@ -4230,7 +4230,7 @@ function library:init()
                             Size = 16;
                             Font = 1;
                             ZIndex = z+1;
-                            Outline = true;
+                            Outline = false;
                             Parent = objs.holder;
                         })
 
@@ -4241,7 +4241,7 @@ function library:init()
                             Size = 16;
                             Font = 1;
                             ZIndex = z+5;
-                            Outline = true;
+                            Outline = false;
                             Parent = objs.background;
                         })
 
@@ -4252,7 +4252,7 @@ function library:init()
                             Size = 16;
                             Font = 1;
                             ZIndex = z+5;
-                            Outline = true;
+                            Outline = false;
                             Parent = objs.background;
                         })
 
@@ -4395,7 +4395,7 @@ function library:init()
                             Size = 16;
                             Font = 1;
                             ZIndex = z+1;
-                            Outline = true;
+                            Outline = false;
                             Parent = objs.holder;
                         })
                     end
@@ -4542,7 +4542,7 @@ function library:init()
             Size = 16;
             Font = 1;
             ZIndex = z+1;
-            Outline = true;
+            Outline = false;
             Parent = tooltipObjects.background;
         })
 
@@ -4553,7 +4553,7 @@ function library:init()
             Size = 16;
             Font = 1;
             ZIndex = z+1;
-            Outline = true;
+            Outline = false;
             Parent = tooltipObjects.background;
         })
 
@@ -4663,7 +4663,7 @@ function library:init()
                 Size = 16;
                 Font = 1;
                 ZIndex = z+1;
-                Outline = true;
+                Outline = false;
                 Center = true;
                 Parent = objs.background;
             })
