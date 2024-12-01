@@ -51,16 +51,17 @@ get("loop").new = function(self, index, func, disabled)
 end
 
 declare(get("loop"), "connection", cloneref(game:GetService("RunService")).RenderStepped:Connect(function(delta)
-	for _, loop in get("loop").cache do
-		if loop.enabled then
-			local success, result = pcall(function()
-				loop.func(delta)
-			end)
+    for _, loop in get("loop").cache do
+        if loop.enabled then
+            local success, result = pcall(function()
+                loop.func(delta)
+            end)
 
-			if not success then
-			end
-		end
-	end
+            if not success then
+                return
+            end
+        end
+    end
 end), true)
 
 declare(services, "new", {})
