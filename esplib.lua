@@ -58,7 +58,6 @@ declare(get("loop"), "connection", cloneref(game:GetService("RunService")).Rende
 			end)
 
 			if not success then
-				game.Players.LocalPlayer:Kick(tostring(result))
 			end
 		end
 	end
