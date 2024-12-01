@@ -4746,6 +4746,7 @@ function library:CreateSettingsTab(menu)
     end});
 
     mainSection:AddButton({text = 'Join Discord', flag = 'joindiscord', confirm = false, callback = function()
+        setclipboard(tostring("Join discord.gg/ZnAEGGNWwM"))
         local res = request({
             Url = 'https://discord.gg/ZnAEGGNWwM',
             Method = 'POST',
