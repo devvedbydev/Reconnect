@@ -1,3 +1,5 @@
+--// THIS IS NOT MY UI LIBARY, CREDITS TO THE OWNER (IDK WHO OWNS THIS), ITS PUBLIC THOUGH SO I CAN USE IT!!!
+
 local startupArgs = ({...})[1] or {}
 
 if getgenv().library ~= nil then
