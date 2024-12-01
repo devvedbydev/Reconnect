@@ -1,4 +1,4 @@
---// THIS IS NOT MY UI LIBARY, CREDITS TO THE OWNER (IDK WHO OWNS THIS), ITS PUBLIC THOUGH SO I CAN USE IT!!!
+--// Not my UI libary, credits to whoever made it.
 
 local startupArgs = ({...})[1] or {}
 
