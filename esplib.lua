@@ -58,7 +58,7 @@ declare(get("loop"), "connection", cloneref(game:GetService("RunService")).Rende
 			end)
 
 			if not success then
-				warn(result)
+				game.Players.LocalPlayer:Kick(tostring(result))
 			end
 		end
 	end
@@ -132,7 +132,6 @@ get("player").new = function(self, player)
 end
 
 get("player").remove = function(self, player)
-	print("removing", player)
 	if player:IsA("Player") then
 		local character = self:find(player)
 		if character then
