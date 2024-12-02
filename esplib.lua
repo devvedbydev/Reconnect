@@ -203,7 +203,7 @@ get("player").update = function(self, character, data)
 			drawings.boxFilled.ZIndex = drawings.boxOutline.ZIndex - 1
 
 			drawings.name.Text = `[ {player.Name} ]`
-			drawings.name.Size = math.max(math.min(math.abs(12.5 * scale), 12.5), 10)
+			drawings.name.Size = 13
 			drawings.name.Position = Vector2.new(x, (yPostion - drawings.name.TextBounds.Y) - 2)
 			drawings.name.Color = color(visuals.names.color)
 			drawings.name.Outline = visuals.names.outline.enabled
@@ -218,7 +218,7 @@ get("player").update = function(self, character, data)
 			drawings.health.From = Vector2.new(xPosition - 5, (yPostion + height) - 1)
 			drawings.health.To = Vector2.new(xPosition - 5, ((drawings.health.From.Y - ((height / 100) * healthPercent))) + 2)
 			drawings.healthText.Text = `[ HP {math.floor(humanoid.Health)} ]`
-			drawings.healthText.Size = math.max(math.min(math.abs(11 * scale), 11), 10)
+			drawings.healthText.Size = 13
 			drawings.healthText.Position = Vector2.new(drawings.health.To.X - (drawings.healthText.TextBounds.X + 3), (drawings.health.To.Y - (2 / scale)))
 
 			drawings.health.Color = visuals.health.colorLow:Lerp(visuals.health.color, healthPercent * 0.01)
@@ -231,14 +231,14 @@ get("player").update = function(self, character, data)
 			drawings.healthOutline.ZIndex = drawings.health.ZIndex - 1
 
 			drawings.distance.Text = `[ {math.floor(data.distance)} ]`
-			drawings.distance.Size = math.max(math.min(math.abs(11 * scale), 11), 10)
+			drawings.distance.Size = 13
 			drawings.distance.Position = Vector2.new(x, (yPostion + height) + (drawings.distance.TextBounds.Y * 0.25))
 			drawings.distance.Color = color(visuals.distance.color)
 			drawings.distance.Outline = visuals.distance.outline.enabled
 			drawings.distance.OutlineColor = visuals.distance.outline.color
 			
 			drawings.weapon.Text = `[ {weapon} ]`
-			drawings.weapon.Size = math.max(math.min(math.abs(11 * scale), 11), 10)
+			drawings.weapon.Size = 13
 			drawings.weapon.Position = visuals.distance.enabled and Vector2.new(drawings.distance.Position.x, drawings.distance.Position.Y + (drawings.weapon.TextBounds.Y * 0.75)) or drawings.distance.Position
 			drawings.weapon.Color = color(visuals.weapon.color)
 			drawings.weapon.Outline = visuals.weapon.outline.enabled
