@@ -193,7 +193,7 @@ get("player").update = function(self, character, data)
 			drawings.boxOutline.Position = drawings.box.Position
 
 			drawings.box.Color = color(visuals.boxes.color)
-			drawings.box.Thickness = 3
+			drawings.box.Thickness = 1.5
 			drawings.boxFilled.Color = color(visuals.boxes.filled.color)
 			drawings.boxFilled.Transparency = visuals.boxes.filled.transparency
 			drawings.boxOutline.Color = visuals.boxes.outline.color
