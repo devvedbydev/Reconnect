@@ -419,16 +419,18 @@ do
 
     function utility:GetHoverObject()
         local objects = {}
-        for i,v in next, library.drawings do
-            if v.Object.Visible and v.Class == 'Square' and self:MouseOver(v.Object) then
-                table.insert(objects,v.Object)
+        for i, v in next, library.drawings do
+            if v.Object and v.Object.Visible and v.Class == 'Square' and self:MouseOver(v.Object) then
+                table.insert(objects, v.Object)
             end
         end
-        table.sort(objects,function(a,b)
-            return a.ZIndex > b.ZIndex
+        table.sort(objects, function(a, b)
+            local zIndexA = tonumber(a.ZIndex) or 0
+            local zIndexB = tonumber(b.ZIndex) or 0
+            return zIndexA > zIndexB
         end)
         return objects[1]
-    end
+    end    
 
     function utility:Draw(class, properties)
         local blacklistedProperties = {'Object','Children','Class'}
