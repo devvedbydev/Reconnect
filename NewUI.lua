@@ -351,7 +351,7 @@ function initLibrary()
             TextSize = 14,
             TextColor3 = Color3.fromRGB(237, 171, 255),
             Text = name,
-            Font = Enum.Font.GothamSemibold,
+            Font = 2,
             TextXAlignment = Enum.TextXAlignment.Left,
             Parent = topbar
         })
@@ -427,7 +427,7 @@ function initLibrary()
                 TextSize = 14,
                 TextColor3 = Color3.fromRGB(237, 171, 255),
                 Text = name,
-                Font = toggled and Enum.Font.GothamSemibold or Enum.Font.Gotham,
+                Font = toggled and 2 or 2,
                 Parent = tabTogglesHolder
             })
             
@@ -497,12 +497,12 @@ function initLibrary()
             local function openTab()
                 for _, obj in next, tabTogglesHolder:GetChildren() do
                     if obj:IsA("TextButton") then
-                        obj.Font = Enum.Font.Gotham
+                        obj.Font = 2
                     end
                 end
 
 
-                tabToggle.Font = Enum.Font.GothamSemibold
+                tabToggle.Font = 2
 
 
                 for _, obj in next, tabs:GetChildren() do
@@ -566,7 +566,7 @@ function initLibrary()
                     TextSize = 13,
                     TextColor3 = Color3.fromRGB(237, 171, 255),
                     Text = name,
-                    Font = Enum.Font.GothamSemibold,
+                    Font = 2,
                     TextXAlignment = Enum.TextXAlignment.Left,
                     Parent = sectionTopbar
                 })
@@ -615,7 +615,7 @@ function initLibrary()
                         TextSize = 13,
                         Text = text,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
-                        Font = Enum.Font.Gotham,
+                        Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
                         Parent = sectionContent
                     })
@@ -654,7 +654,7 @@ function initLibrary()
                         TextSize = 13,
                         Text = text,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
-                        Font = Enum.Font.Gotham,
+                        Font = 2,
                         Parent = sectionContent
                     })
 
@@ -716,7 +716,7 @@ function initLibrary()
                         ZIndex = 3,
                         Size = UDim2.new(1, 0, 0, 16),
                         BorderColor3 = Color3.fromRGB(22, 22, 22),
-                        Font = Enum.Font.Gotham,
+                        Font = 2,
                         BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         Text = "",
                         TextXAlignment = Enum.TextXAlignment.Left,
@@ -741,7 +741,7 @@ function initLibrary()
                         TextSize = 13,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = name,
-                        Font = Enum.Font.Gotham,
+                        Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
                         Parent = button
                     })
@@ -798,7 +798,7 @@ function initLibrary()
                         Size = UDim2.new(1, 0, 0, 16),
                         BackgroundTransparency = 1,
                         TextColor3 = Color3.fromRGB(0, 0, 0),
-                        Font = Enum.Font.SourceSans,
+                        Font = 2,
                         Parent = sectionContent
                     })
                     
@@ -829,9 +829,9 @@ function initLibrary()
                         BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
-                        TextColor3 = Color3.fromRGB(180, 180, 180),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = name,
-                        Font = Enum.Font.Gotham,
+                        Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
                         Parent = icon
                     })
@@ -848,7 +848,7 @@ function initLibrary()
                         end
 
 
-                        local textColor = toggled and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(180, 180, 180)
+                        local textColor = toggled and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(237, 171, 255)
                         local gradientColor
                         if toggled then
                             gradientColor = ColorSequence.new{
@@ -965,7 +965,7 @@ function initLibrary()
                         TextSize = 12,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = default,
-                        Font = Enum.Font.Gotham,
+                        Font = 2,
                         PlaceholderText = placeholder,
                         Parent = boxHolder
                     })
@@ -996,7 +996,7 @@ function initLibrary()
                         TextSize = 13,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = name,
-                        Font = Enum.Font.Gotham,
+                        Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
                         Parent = boxHolder
                     })
@@ -1176,7 +1176,7 @@ function initLibrary()
                         TextSize = 12,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = valueText:gsub("%[VALUE%]", tostring(default)),
-                        Font = Enum.Font.Gotham,
+                        Font = 2,
                         Parent = slider
                     })
 
@@ -1386,7 +1386,7 @@ function initLibrary()
                         TextSize = 12,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = valueText:gsub("%[VALUE%]", tostring(default)),
-                        Font = Enum.Font.Gotham,
+                        Font = 2,
                         Parent = slider
                     })
 
@@ -1398,7 +1398,7 @@ function initLibrary()
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 14,
                         TextColor3 = Color3.fromRGB(0, 0, 0),
-                        Font = Enum.Font.SourceSans,
+                        Font = 2,
                         Parent = toggleSliderHolder
                     })
                     
@@ -1431,7 +1431,7 @@ function initLibrary()
                         TextSize = 13,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = name,
-                        Font = Enum.Font.Gotham,
+                        Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
                         Parent = icon
                     })
@@ -1448,7 +1448,7 @@ function initLibrary()
                         end
 
 
-                        local textColor = toggled and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(180, 180, 180)
+                        local textColor = toggled and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(237, 171, 255)
                         local gradientColor
                         if toggled then
                             gradientColor = ColorSequence.new{
@@ -1655,7 +1655,7 @@ function initLibrary()
                         TextSize = 13,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = name,
-                        Font = Enum.Font.Gotham,
+                        Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
                         Parent = dropdownHolder
                     })
@@ -1667,7 +1667,7 @@ function initLibrary()
                         Position = UDim2.new(0, 0, 0, 20),
                         BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         Text = "",
-                        Font = Enum.Font.Gotham,
+                        Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
                         Parent = dropdownHolder
                     })
@@ -1685,9 +1685,9 @@ function initLibrary()
                         Position = UDim2.new(0, 8, 0, 0),
                         FontSize = Enum.FontSize.Size12,
                         TextSize = 12,
-                        TextColor3 = (multiChoice and (#default > 0 and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(180, 180, 180))) or default and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(180, 180, 180),
+                        TextColor3 = (multiChoice and (#default > 0 and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(237, 171, 255))) or default and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(237, 171, 255),
                         Text = multiChoice and (#default > 0 and table.concat(default, ", ") or "NONE") or (default or "NONE"),
-                        Font = Enum.Font.Gotham,
+                        Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
                         Parent = open
                     })
@@ -1744,19 +1744,19 @@ function initLibrary()
                         for i, v in next, contentHolder:GetChildren() do
                             if v:IsA("TextButton") then
                                 v:FindFirstChildOfClass("UIPadding").PaddingLeft = UDim.new(0, 6)
-                                v.Font = Enum.Font.Gotham
+                                v.Font = 2
                             end
                         end
 
 
-                        obj.Font = bool and Enum.Font.GothamSemibold or Enum.Font.Gotham
+                        obj.Font = bool and 2 or 2
                         padding.PaddingLeft = bool and UDim.new(0, 10) or UDim.new(0, 6)
-                        value.TextColor3 = bool and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(180, 180, 180)
+                        value.TextColor3 = bool and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(237, 171, 255)
                     end
 
 
                     local function multiSelectObj(obj, padding, bool)
-                        obj.Font = bool and Enum.Font.GothamSemibold or Enum.Font.Gotham
+                        obj.Font = bool and 2 or 2
                         padding.PaddingLeft = bool and UDim.new(0, 10) or UDim.new(0, 6)
                     end
                     
@@ -1774,7 +1774,7 @@ function initLibrary()
                             TextSize = 12,
                             TextColor3 = Color3.fromRGB(237, 171, 255),
                             Text = tostring(opt),
-                            Font = current == opt and Enum.Font.GothamSemibold or Enum.Font.Gotham,
+                            Font = current == opt and 2 or 2,
                             TextXAlignment = Enum.TextXAlignment.Left,
                             Parent = contentHolder
                         })
@@ -1831,7 +1831,7 @@ function initLibrary()
 
 
                                     multiSelectObj(option, optionPadding, false)
-                                    value.TextColor3 = #chosen > 0 and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(180, 180, 180)
+                                    value.TextColor3 = #chosen > 0 and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(237, 171, 255)
                                     value.Text = #chosen > 0 and table.concat(chosen, ", ") or "NONE"
 
 
@@ -1919,13 +1919,13 @@ function initLibrary()
                                 for i, v in next, contentHolder:GetChildren() do
                                     if v:IsA("TextButton") then
                                         v:FindFirstChildOfClass("UIPadding").PaddingLeft = UDim.new(0, 6)
-                                        v.Font = Enum.Font.Gotham
+                                        v.Font = 2
                                     end
                                 end
 
 
                                 value.Text = "NONE"
-                                value.TextColor3 = Color3.fromRGB(180, 180, 180)
+                                value.TextColor3 = Color3.fromRGB(237, 171, 255)
 
 
                                 if flag then
@@ -1941,12 +1941,12 @@ function initLibrary()
                                 for i, v in next, contentHolder:GetChildren() do
                                     if v:IsA("TextButton") then
                                         v:FindFirstChildOfClass("UIPadding").PaddingLeft = UDim.new(0, 6)
-                                        v.Font = Enum.Font.GothamSemiBold
+                                        v.Font = 2
                                     end
                                 end
 
 
-                                value.TextColor3 = Color3.fromRGB(180, 180, 180)
+                                value.TextColor3 = Color3.fromRGB(237, 171, 255)
                                 value.Text = "NONE"
 
 
@@ -1975,7 +1975,7 @@ function initLibrary()
                             TextSize = 12,
                             TextColor3 = Color3.fromRGB(237, 171, 255),
                             Text = tostring(opt),
-                            Font = current == opt and Enum.Font.GothamSemibold or Enum.Font.Gotham,
+                            Font = current == opt and 2 or 2,
                             TextXAlignment = Enum.TextXAlignment.Left,
                             Parent = contentHolder
                         })
@@ -2032,7 +2032,7 @@ function initLibrary()
 
 
                                     multiSelectObj(option, optionPadding, false)
-                                    value.TextColor3 = #chosen > 0 and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(180, 180, 180)
+                                    value.TextColor3 = #chosen > 0 and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(237, 171, 255)
                                     value.Text = #chosen > 0 and table.concat(chosen, ", ") or "NONE"
 
 
@@ -2062,7 +2062,7 @@ function initLibrary()
                             else
                                 if table.find(chosen, opt) then
                                     table.remove(chosen, table.find(chosen, opt))
-                                    value.TextColor3 = #chosen > 0 and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(180, 180, 180)
+                                    value.TextColor3 = #chosen > 0 and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(237, 171, 255)
                                     value.Text = #chosen > 0 and table.concat(chosen, ", ") or "NONE"
                                 end
 
@@ -2098,7 +2098,7 @@ function initLibrary()
                                 TextSize = 12,
                                 TextColor3 = Color3.fromRGB(237, 171, 255),
                                 Text = tostring(opt),
-                                Font = current == opt and Enum.Font.GothamSemibold or Enum.Font.Gotham,
+                                Font = current == opt and 2 or 2,
                                 TextXAlignment = Enum.TextXAlignment.Left,
                                 Parent = contentHolder
                             })
@@ -2148,7 +2148,7 @@ function initLibrary()
                                         table.remove(chosen, table.find(chosen, opt))
         
                                         multiSelectObj(option, optionPadding, false)
-                                        value.TextColor3 = #chosen > 0 and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(180, 180, 180)
+                                        value.TextColor3 = #chosen > 0 and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(237, 171, 255)
                                         value.Text = #chosen > 0 and table.concat(chosen, ", ") or "NONE"
         
                                         if flag then
@@ -2255,7 +2255,7 @@ function initLibrary()
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 14,
                         TextColor3 = Color3.fromRGB(0, 0, 0),
-                        Font = Enum.Font.SourceSans,
+                        Font = 2,
                         Parent = sectionContent
                     })
                     
@@ -2268,7 +2268,7 @@ function initLibrary()
                         TextSize = 13,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = name,
-                        Font = Enum.Font.Gotham,
+                        Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
                         Parent = keybind
                     })
@@ -2280,9 +2280,9 @@ function initLibrary()
                         Position = UDim2.new(1, 0, 0, 0),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
-                        TextColor3 = Color3.fromRGB(180, 180, 180),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = default and (keys[default] or tostring(default):gsub("Enum.KeyCode.", "")) or "NONE",
-                        Font = Enum.Font.Gotham,
+                        Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Right,
                         Parent = keybind
                     })
@@ -2297,7 +2297,7 @@ function initLibrary()
                         binding = inputService.InputBegan:Connect(function(input)
                             local key = keys[input.KeyCode] or keys[input.UserInputType]
                             value.Text = (keys[key] or tostring(input.KeyCode):gsub("Enum.KeyCode.", ""))
-                            value.TextColor3 = Color3.fromRGB(180, 180, 180)
+                            value.TextColor3 = Color3.fromRGB(237, 171, 255)
 
 
                             if input.UserInputType == Enum.UserInputType.Keyboard then
@@ -2313,7 +2313,7 @@ function initLibrary()
                                     binding:Disconnect()
                                 else
                                     keyChosen = nil
-                                    value.TextColor3 = Color3.fromRGB(180, 180, 180)
+                                    value.TextColor3 = Color3.fromRGB(237, 171, 255)
                                     value.Text = "NONE"
                                         
                                     if flag then
@@ -2336,7 +2336,7 @@ function initLibrary()
                                     binding:Disconnect()
                                 else
                                     keyChosen = nil
-                                    value.TextColor3 = Color3.fromRGB(180, 180, 180)
+                                    value.TextColor3 = Color3.fromRGB(237, 171, 255)
                                     value.Text = "NONE"
                                     
                                     if flag then
@@ -2387,7 +2387,7 @@ function initLibrary()
                             if not table.find(blacklist, newKey) then
                                 local key = keys[newKey]
                                 value.Text = (keys[key] or tostring(newKey):gsub("Enum.KeyCode.", ""))
-                                value.TextColor3 = Color3.fromRGB(180, 180, 180)
+                                value.TextColor3 = Color3.fromRGB(237, 171, 255)
             
                                 keyChosen = newKey
             
@@ -2396,7 +2396,7 @@ function initLibrary()
                                 end
                             else
                                 keyChosen = nil
-                                value.TextColor3 = Color3.fromRGB(180, 180, 180)
+                                value.TextColor3 = Color3.fromRGB(237, 171, 255)
                                 value.Text = "NONE"
 
 
@@ -2502,7 +2502,7 @@ function initLibrary()
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 14,
                         TextColor3 = Color3.fromRGB(0, 0, 0),
-                        Font = Enum.Font.SourceSans,
+                        Font = 2,
                         Parent = sectionContent
                     })
 
@@ -2517,7 +2517,7 @@ function initLibrary()
                         TextSize = 13,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = name,
-                        Font = Enum.Font.Gotham,
+                        Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
                         Parent = toggleKeybind
                     })
@@ -2544,9 +2544,9 @@ function initLibrary()
                         BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
-                        TextColor3 = Color3.fromRGB(180, 180, 180),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = default and (keys[default] or tostring(default):gsub("Enum.KeyCode.", "")) or "NONE",
-                        Font = Enum.Font.Gotham,
+                        Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Right,
                         Parent = toggleKeybind
                     })
@@ -2567,7 +2567,7 @@ function initLibrary()
                         end
 
 
-                        local textColor = toggled and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(180, 180, 180)
+                        local textColor = toggled and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(237, 171, 255)
                         local gradientColor
                         if toggled then
                             gradientColor = ColorSequence.new{
@@ -2610,7 +2610,7 @@ function initLibrary()
                             value.Text = (keys[key] or tostring(input.KeyCode):gsub("Enum.KeyCode.", ""))
                             value.Size = UDim2.new(0, value.TextBounds.X, 1, 0)
                             value.Position = UDim2.new(1, -value.TextBounds.X, 0, 0)
-                            value.TextColor3 = Color3.fromRGB(180, 180, 180)
+                            value.TextColor3 = Color3.fromRGB(237, 171, 255)
                     
                             if input.UserInputType == Enum.UserInputType.Keyboard then
                                 if not table.find(blacklist, input.KeyCode) then
@@ -2623,7 +2623,7 @@ function initLibrary()
                                     binding:Disconnect()
                                 else
                                     keyChosen = nil
-                                    value.TextColor3 = Color3.fromRGB(180, 180, 180)
+                                    value.TextColor3 = Color3.fromRGB(237, 171, 255)
                                     value.Text = "NONE"
                                     value.Size = UDim2.new(0, value.TextBounds.X, 1, 0)
                                     value.Position = UDim2.new(1, -value.TextBounds.X, 0, 0)
@@ -2645,7 +2645,7 @@ function initLibrary()
                                     binding:Disconnect()
                                 else
                                     keyChosen = nil
-                                    value.TextColor3 = Color3.fromRGB(180, 180, 180)
+                                    value.TextColor3 = Color3.fromRGB(237, 171, 255)
                                     value.Text = "NONE"
                                     value.Size = UDim2.new(0, value.TextBounds.X, 1, 0)
                                     value.Position = UDim2.new(1, -value.TextBounds.X, 0, 0)
@@ -2702,7 +2702,7 @@ function initLibrary()
                                 value.Text = (keys[key] or tostring(newKey):gsub("Enum.KeyCode.", ""))
                                 value.Size = UDim2.new(0, value.TextBounds.X, 1, 0)
                                 value.Position = UDim2.new(1, -value.TextBounds.X, 0, 0)
-                                value.TextColor3 = Color3.fromRGB(180, 180, 180)
+                                value.TextColor3 = Color3.fromRGB(237, 171, 255)
                     
                                 keyChosen = newKey
                     
@@ -2711,7 +2711,7 @@ function initLibrary()
                                 end
                             else
                                 keyChosen = nil
-                                value.TextColor3 = Color3.fromRGB(180, 180, 180)
+                                value.TextColor3 = Color3.fromRGB(237, 171, 255)
                                 value.Text = "NONE"
                     
                                 if keybindFlag then
@@ -2780,7 +2780,7 @@ function initLibrary()
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 14,
                         TextColor3 = Color3.fromRGB(0, 0, 0),
-                        Font = Enum.Font.SourceSans,
+                        Font = 2,
                         Parent = colorPickerHolder
                     })
                     
@@ -2793,7 +2793,7 @@ function initLibrary()
                         TextSize = 13,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = name,
-                        Font = Enum.Font.Gotham,
+                        Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
                         Parent = colorPicker
                     })
@@ -2876,13 +2876,13 @@ function initLibrary()
                         BackgroundTransparency = 1,
                         Position = UDim2.new(0, 5, 1, -42),
                         BackgroundColor3 = Color3.fromRGB(30, 30, 30),
-                        PlaceholderColor3 = Color3.fromRGB(180, 180, 180),
+                        PlaceholderColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size12,
                         TextSize = 12,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = table.concat({utility.get_rgb(default)}, ", "),
                         ClearTextOnFocus = false,
-                        Font = Enum.Font.Gotham,
+                        Font = 2,
                         PlaceholderText = "R,  G,  B",
                         Parent = picker
                     })
@@ -2907,13 +2907,13 @@ function initLibrary()
                         BackgroundTransparency = 1,
                         Position = UDim2.new(0, 5, 1, -21),
                         BackgroundColor3 = Color3.fromRGB(30, 30, 30),
-                        PlaceholderColor3 = Color3.fromRGB(180, 180, 180),
+                        PlaceholderColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size12,
                         TextSize = 12,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = utility.rgb_to_hex(default),
                         ClearTextOnFocus = false,
-                        Font = Enum.Font.Gotham,
+                        Font = 2,
                         PlaceholderText = utility.rgb_to_hex(default),
                         Parent = picker
                     })
@@ -3209,7 +3209,7 @@ function initLibrary()
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 14,
                         TextColor3 = Color3.fromRGB(0, 0, 0),
-                        Font = Enum.Font.SourceSans,
+                        Font = 2,
                         Parent = toggleColorPickerHolder
                     })
 
@@ -3257,9 +3257,9 @@ function initLibrary()
                         BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
-                        TextColor3 = Color3.fromRGB(180, 180, 180),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = name,
-                        Font = Enum.Font.Gotham,
+                        Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
                         Parent = icon
                     })
@@ -3324,13 +3324,13 @@ function initLibrary()
                         BackgroundTransparency = 1,
                         Position = UDim2.new(0, 5, 1, -42),
                         BackgroundColor3 = Color3.fromRGB(30, 30, 30),
-                        PlaceholderColor3 = Color3.fromRGB(180, 180, 180),
+                        PlaceholderColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size12,
                         TextSize = 12,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = table.concat({utility.get_rgb(default)}, ", "),
                         ClearTextOnFocus = false,
-                        Font = Enum.Font.Gotham,
+                        Font = 2,
                         PlaceholderText = "R,  G,  B",
                         Parent = picker
                     })
@@ -3355,13 +3355,13 @@ function initLibrary()
                         BackgroundTransparency = 1,
                         Position = UDim2.new(0, 5, 1, -21),
                         BackgroundColor3 = Color3.fromRGB(30, 30, 30),
-                        PlaceholderColor3 = Color3.fromRGB(180, 180, 180),
+                        PlaceholderColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size12,
                         TextSize = 12,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = utility.rgb_to_hex(default),
                         ClearTextOnFocus = false,
-                        Font = Enum.Font.Gotham,
+                        Font = 2,
                         PlaceholderText = utility.rgb_to_hex(default),
                         Parent = picker
                     })
@@ -3392,7 +3392,7 @@ function initLibrary()
                         end
 
 
-                        local textColor = toggled and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(180, 180, 180)
+                        local textColor = toggled and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(237, 171, 255)
                         local gradientColor
                         if toggled then
                             gradientColor = ColorSequence.new{
