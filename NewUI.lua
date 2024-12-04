@@ -1174,7 +1174,7 @@ function initLibrary()
                         BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size12,
                         TextSize = 12,
-                        TextColor3 = Color3.fromRGB(237, 171, 255),
+                        TextColor3 = Color3.fromRGB(255, 255, 255),
                         Text = valueText:gsub("%[VALUE%]", tostring(default)),
                         Font = 2,
                         Parent = slider
