@@ -349,7 +349,7 @@ function initLibrary()
             Position = UDim2.new(0, 8, 0, 0),
             FontSize = Enum.FontSize.Size14,
             TextSize = 14,
-            TextColor3 = Color3.fromRGB(255, 255, 255),
+            TextColor3 = Color3.fromRGB(237, 171, 255),
             Text = name,
             Font = 2,
             TextXAlignment = Enum.TextXAlignment.Left,
@@ -425,7 +425,7 @@ function initLibrary()
                 BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                 FontSize = Enum.FontSize.Size14,
                 TextSize = 14,
-                TextColor3 = Color3.fromRGB(255, 255, 255),
+                TextColor3 = Color3.fromRGB(237, 171, 255),
                 Text = name,
                 Font = toggled and 2 or 2,
                 Parent = tabTogglesHolder
@@ -564,7 +564,7 @@ function initLibrary()
                     BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                     FontSize = Enum.FontSize.Size14,
                     TextSize = 13,
-                    TextColor3 = Color3.fromRGB(255, 255, 255),
+                    TextColor3 = Color3.fromRGB(237, 171, 255),
                     Text = name,
                     Font = 2,
                     TextXAlignment = Enum.TextXAlignment.Left,
@@ -614,7 +614,7 @@ function initLibrary()
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
                         Text = text,
-                        TextColor3 = Color3.fromRGB(255, 255, 255),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
                         Parent = sectionContent
@@ -653,7 +653,7 @@ function initLibrary()
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
                         Text = text,
-                        TextColor3 = Color3.fromRGB(255, 255, 255),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Font = 2,
                         Parent = sectionContent
                     })
@@ -739,7 +739,7 @@ function initLibrary()
                         Position = UDim2.new(0, 8, 0, 0),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
-                        TextColor3 = Color3.fromRGB(255, 255, 255),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = name,
                         Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
@@ -829,7 +829,7 @@ function initLibrary()
                         BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
-                        TextColor3 = Color3.fromRGB(255, 255, 255),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = name,
                         Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
@@ -963,7 +963,7 @@ function initLibrary()
                         BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                         FontSize = Enum.FontSize.Size12,
                         TextSize = 12,
-                        TextColor3 = Color3.fromRGB(255, 255, 255),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = default,
                         Font = 2,
                         PlaceholderText = placeholder,
@@ -994,7 +994,7 @@ function initLibrary()
                         BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
-                        TextColor3 = Color3.fromRGB(255, 255, 255),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = name,
                         Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
@@ -1174,7 +1174,7 @@ function initLibrary()
                         BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                         FontSize = Enum.FontSize.Size12,
                         TextSize = 12,
-                        TextColor3 = Color3.fromRGB(255, 255, 255),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = valueText:gsub("%[VALUE%]", tostring(default)),
                         Font = 2,
                         Parent = slider
@@ -1384,7 +1384,7 @@ function initLibrary()
                         BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                         FontSize = Enum.FontSize.Size12,
                         TextSize = 12,
-                        TextColor3 = Color3.fromRGB(255, 255, 255),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = valueText:gsub("%[VALUE%]", tostring(default)),
                         Font = 2,
                         Parent = slider
@@ -1429,7 +1429,7 @@ function initLibrary()
                         BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
-                        TextColor3 = Color3.fromRGB(255, 255, 255),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = name,
                         Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
@@ -1653,7 +1653,7 @@ function initLibrary()
                         BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
-                        TextColor3 = Color3.fromRGB(255, 255, 255),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = name,
                         Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
@@ -1772,7 +1772,7 @@ function initLibrary()
                             BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                             FontSize = Enum.FontSize.Size12,
                             TextSize = 12,
-                            TextColor3 = Color3.fromRGB(255, 255, 255),
+                            TextColor3 = Color3.fromRGB(237, 171, 255),
                             Text = tostring(opt),
                             Font = current == opt and 2 or 2,
                             TextXAlignment = Enum.TextXAlignment.Left,
@@ -1817,7 +1817,7 @@ function initLibrary()
 
 
                                     multiSelectObj(option, optionPadding, true)
-                                    value.TextColor3 = Color3.fromRGB(255, 255, 255)
+                                    value.TextColor3 = Color3.fromRGB(237, 171, 255)
                                     value.Text = table.concat(chosen, ", ")
                                     
                                     if flag then
@@ -1885,7 +1885,7 @@ function initLibrary()
 
 
                                         multiSelectObj(contentHolder:FindFirstChild(opt), contentHolder:FindFirstChild(opt):FindFirstChildOfClass("UIPadding"), true)
-                                        value.TextColor3 = Color3.fromRGB(255, 255, 255)
+                                        value.TextColor3 = Color3.fromRGB(237, 171, 255)
                                         value.Text = table.concat(chosen, ", ")
                                         
                                         if flag then
@@ -1906,7 +1906,7 @@ function initLibrary()
                                         multiSelectObj(contentHolder:FindFirstChild(v), contentHolder:FindFirstChild(v):FindFirstChildOfClass("UIPadding"), true)
 
 
-                                        value.TextColor3 = Color3.fromRGB(255, 255, 255)
+                                        value.TextColor3 = Color3.fromRGB(237, 171, 255)
                                         value.Text = table.concat(chosen, ", ")
                                     end
                                 end
@@ -1925,7 +1925,7 @@ function initLibrary()
 
 
                                 value.Text = "NONE"
-                                value.TextColor3 = Color3.fromRGB(255, 255, 255)
+                                value.TextColor3 = Color3.fromRGB(237, 171, 255)
 
 
                                 if flag then
@@ -1946,7 +1946,7 @@ function initLibrary()
                                 end
 
 
-                                value.TextColor3 = Color3.fromRGB(255, 255, 255)
+                                value.TextColor3 = Color3.fromRGB(237, 171, 255)
                                 value.Text = "NONE"
 
 
@@ -1973,7 +1973,7 @@ function initLibrary()
                             BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                             FontSize = Enum.FontSize.Size12,
                             TextSize = 12,
-                            TextColor3 = Color3.fromRGB(255, 255, 255),
+                            TextColor3 = Color3.fromRGB(237, 171, 255),
                             Text = tostring(opt),
                             Font = current == opt and 2 or 2,
                             TextXAlignment = Enum.TextXAlignment.Left,
@@ -2018,7 +2018,7 @@ function initLibrary()
 
 
                                     multiSelectObj(option, optionPadding, true)
-                                    value.TextColor3 = Color3.fromRGB(255, 255, 255)
+                                    value.TextColor3 = Color3.fromRGB(237, 171, 255)
                                     value.Text = table.concat(chosen, ", ")
                                     
                                     if flag then
@@ -2096,7 +2096,7 @@ function initLibrary()
                                 BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                                 FontSize = Enum.FontSize.Size12,
                                 TextSize = 12,
-                                TextColor3 = Color3.fromRGB(255, 255, 255),
+                                TextColor3 = Color3.fromRGB(237, 171, 255),
                                 Text = tostring(opt),
                                 Font = current == opt and 2 or 2,
                                 TextXAlignment = Enum.TextXAlignment.Left,
@@ -2136,7 +2136,7 @@ function initLibrary()
                                         table.insert(chosen, opt)
         
                                         multiSelectObj(option, optionPadding, true)
-                                        value.TextColor3 = Color3.fromRGB(255, 255, 255)
+                                        value.TextColor3 = Color3.fromRGB(237, 171, 255)
                                         value.Text = table.concat(chosen, ", ")
                                         
                                         if flag then
@@ -2266,7 +2266,7 @@ function initLibrary()
                         BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
-                        TextColor3 = Color3.fromRGB(255, 255, 255),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = name,
                         Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
@@ -2280,7 +2280,7 @@ function initLibrary()
                         Position = UDim2.new(1, 0, 0, 0),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
-                        TextColor3 = Color3.fromRGB(255, 255, 255),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = default and (keys[default] or tostring(default):gsub("Enum.KeyCode.", "")) or "NONE",
                         Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Right,
@@ -2290,14 +2290,14 @@ function initLibrary()
 
                     keybind.MouseButton1Click:Connect(function()
                         value.Text = "..."
-                        value.TextColor3 = Color3.fromRGB(255, 255, 255)
+                        value.TextColor3 = Color3.fromRGB(237, 171, 255)
 
 
                         local binding
                         binding = inputService.InputBegan:Connect(function(input)
                             local key = keys[input.KeyCode] or keys[input.UserInputType]
                             value.Text = (keys[key] or tostring(input.KeyCode):gsub("Enum.KeyCode.", ""))
-                            value.TextColor3 = Color3.fromRGB(255, 255, 255)
+                            value.TextColor3 = Color3.fromRGB(237, 171, 255)
 
 
                             if input.UserInputType == Enum.UserInputType.Keyboard then
@@ -2313,7 +2313,7 @@ function initLibrary()
                                     binding:Disconnect()
                                 else
                                     keyChosen = nil
-                                    value.TextColor3 = Color3.fromRGB(255, 255, 255)
+                                    value.TextColor3 = Color3.fromRGB(237, 171, 255)
                                     value.Text = "NONE"
                                         
                                     if flag then
@@ -2336,7 +2336,7 @@ function initLibrary()
                                     binding:Disconnect()
                                 else
                                     keyChosen = nil
-                                    value.TextColor3 = Color3.fromRGB(255, 255, 255)
+                                    value.TextColor3 = Color3.fromRGB(237, 171, 255)
                                     value.Text = "NONE"
                                     
                                     if flag then
@@ -2387,7 +2387,7 @@ function initLibrary()
                             if not table.find(blacklist, newKey) then
                                 local key = keys[newKey]
                                 value.Text = (keys[key] or tostring(newKey):gsub("Enum.KeyCode.", ""))
-                                value.TextColor3 = Color3.fromRGB(255, 255, 255)
+                                value.TextColor3 = Color3.fromRGB(237, 171, 255)
             
                                 keyChosen = newKey
             
@@ -2396,7 +2396,7 @@ function initLibrary()
                                 end
                             else
                                 keyChosen = nil
-                                value.TextColor3 = Color3.fromRGB(255, 255, 255)
+                                value.TextColor3 = Color3.fromRGB(237, 171, 255)
                                 value.Text = "NONE"
 
 
@@ -2515,7 +2515,7 @@ function initLibrary()
                         BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
-                        TextColor3 = Color3.fromRGB(255, 255, 255),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = name,
                         Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
@@ -2544,7 +2544,7 @@ function initLibrary()
                         BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
-                        TextColor3 = Color3.fromRGB(255, 255, 255),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = default and (keys[default] or tostring(default):gsub("Enum.KeyCode.", "")) or "NONE",
                         Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Right,
@@ -2602,7 +2602,7 @@ function initLibrary()
                         value.Text = "..."
                         value.Size = UDim2.new(0, value.TextBounds.X, 1, 0)
                         value.Position = UDim2.new(1, -value.TextBounds.X, 0, 0)
-                        value.TextColor3 = Color3.fromRGB(255, 255, 255)
+                        value.TextColor3 = Color3.fromRGB(237, 171, 255)
                     
                         local binding
                         binding = inputService.InputBegan:Connect(function(input)
@@ -2610,7 +2610,7 @@ function initLibrary()
                             value.Text = (keys[key] or tostring(input.KeyCode):gsub("Enum.KeyCode.", ""))
                             value.Size = UDim2.new(0, value.TextBounds.X, 1, 0)
                             value.Position = UDim2.new(1, -value.TextBounds.X, 0, 0)
-                            value.TextColor3 = Color3.fromRGB(255, 255, 255)
+                            value.TextColor3 = Color3.fromRGB(237, 171, 255)
                     
                             if input.UserInputType == Enum.UserInputType.Keyboard then
                                 if not table.find(blacklist, input.KeyCode) then
@@ -2623,7 +2623,7 @@ function initLibrary()
                                     binding:Disconnect()
                                 else
                                     keyChosen = nil
-                                    value.TextColor3 = Color3.fromRGB(255, 255, 255)
+                                    value.TextColor3 = Color3.fromRGB(237, 171, 255)
                                     value.Text = "NONE"
                                     value.Size = UDim2.new(0, value.TextBounds.X, 1, 0)
                                     value.Position = UDim2.new(1, -value.TextBounds.X, 0, 0)
@@ -2645,7 +2645,7 @@ function initLibrary()
                                     binding:Disconnect()
                                 else
                                     keyChosen = nil
-                                    value.TextColor3 = Color3.fromRGB(255, 255, 255)
+                                    value.TextColor3 = Color3.fromRGB(237, 171, 255)
                                     value.Text = "NONE"
                                     value.Size = UDim2.new(0, value.TextBounds.X, 1, 0)
                                     value.Position = UDim2.new(1, -value.TextBounds.X, 0, 0)
@@ -2702,7 +2702,7 @@ function initLibrary()
                                 value.Text = (keys[key] or tostring(newKey):gsub("Enum.KeyCode.", ""))
                                 value.Size = UDim2.new(0, value.TextBounds.X, 1, 0)
                                 value.Position = UDim2.new(1, -value.TextBounds.X, 0, 0)
-                                value.TextColor3 = Color3.fromRGB(255, 255, 255)
+                                value.TextColor3 = Color3.fromRGB(237, 171, 255)
                     
                                 keyChosen = newKey
                     
@@ -2711,7 +2711,7 @@ function initLibrary()
                                 end
                             else
                                 keyChosen = nil
-                                value.TextColor3 = Color3.fromRGB(255, 255, 255)
+                                value.TextColor3 = Color3.fromRGB(237, 171, 255)
                                 value.Text = "NONE"
                     
                                 if keybindFlag then
@@ -2791,7 +2791,7 @@ function initLibrary()
                         BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
-                        TextColor3 = Color3.fromRGB(255, 255, 255),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = name,
                         Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
@@ -2879,7 +2879,7 @@ function initLibrary()
                         PlaceholderColor3 = Color3.fromRGB(255, 255, 255),
                         FontSize = Enum.FontSize.Size12,
                         TextSize = 12,
-                        TextColor3 = Color3.fromRGB(255, 255, 255),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = table.concat({utility.get_rgb(default)}, ", "),
                         ClearTextOnFocus = false,
                         Font = 2,
@@ -2910,7 +2910,7 @@ function initLibrary()
                         PlaceholderColor3 = Color3.fromRGB(255, 255, 255),
                         FontSize = Enum.FontSize.Size12,
                         TextSize = 12,
-                        TextColor3 = Color3.fromRGB(255, 255, 255),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = utility.rgb_to_hex(default),
                         ClearTextOnFocus = false,
                         Font = 2,
@@ -3257,7 +3257,7 @@ function initLibrary()
                         BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
-                        TextColor3 = Color3.fromRGB(255, 255, 255),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = name,
                         Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
@@ -3327,7 +3327,7 @@ function initLibrary()
                         PlaceholderColor3 = Color3.fromRGB(255, 255, 255),
                         FontSize = Enum.FontSize.Size12,
                         TextSize = 12,
-                        TextColor3 = Color3.fromRGB(255, 255, 255),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = table.concat({utility.get_rgb(default)}, ", "),
                         ClearTextOnFocus = false,
                         Font = 2,
@@ -3358,7 +3358,7 @@ function initLibrary()
                         PlaceholderColor3 = Color3.fromRGB(255, 255, 255),
                         FontSize = Enum.FontSize.Size12,
                         TextSize = 12,
-                        TextColor3 = Color3.fromRGB(255, 255, 255),
+                        TextColor3 = Color3.fromRGB(237, 171, 255),
                         Text = utility.rgb_to_hex(default),
                         ClearTextOnFocus = false,
                         Font = 2,
