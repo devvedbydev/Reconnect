@@ -154,7 +154,7 @@ function initLibrary()
         flags = {}, 
         toggled = true,
         color = Color3.fromRGB(255, 0, 0),
-        keybind = Enum.KeyCode.RightShift, 
+        keybind = Enum.KeyCode.Insert, 
         dragSpeed = 0.1
     }    
 
@@ -2196,7 +2196,7 @@ function initLibrary()
 
                     local keys = {
                         [Enum.KeyCode.LeftShift] = "Left Shift";
-                        [Enum.KeyCode.RightShift] = "Right Shift";
+                        [Enum.KeyCode.Insert] = "Right Shift";
                         [Enum.KeyCode.LeftControl] = "Left Ctrl";
                         [Enum.KeyCode.RightControl] = "Right Ctrl";
                         [Enum.KeyCode.LeftAlt] = "Left Alt";
@@ -2432,7 +2432,7 @@ function initLibrary()
 
                     local keys = {
                         [Enum.KeyCode.LeftShift] = "Left Shift";
-                        [Enum.KeyCode.RightShift] = "Right Shift";
+                        [Enum.KeyCode.Insert] = "Right Shift";
                         [Enum.KeyCode.LeftControl] = "Left Ctrl";
                         [Enum.KeyCode.RightControl] = "Right Ctrl";
                         [Enum.KeyCode.LeftAlt] = "Left Alt";
