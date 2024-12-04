@@ -322,7 +322,7 @@ function initLibrary()
         local name = options.name or "Epic UI Library"
         local sizeX = options.sizeX or 466
         local sizeY = options.sizeY or 350
-        local color = options.color or Color3.fromRGB(255, 255, 255)
+        local color = options.color or Color3.fromRGB(191, 135, 232)
         local dragSpeed = options.dragSpeed or 0
 
 
@@ -349,7 +349,7 @@ function initLibrary()
             Position = UDim2.new(0, 8, 0, 0),
             FontSize = Enum.FontSize.Size14,
             TextSize = 14,
-            TextColor3 = Color3.fromRGB(255, 255, 255),
+            TextColor3 = Color3.fromRGB(191, 135, 232),
             Text = name,
             Font = Enum.Font.GothamSemibold,
             TextXAlignment = Enum.TextXAlignment.Left,
@@ -425,7 +425,7 @@ function initLibrary()
                 BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                 FontSize = Enum.FontSize.Size14,
                 TextSize = 14,
-                TextColor3 = Color3.fromRGB(255, 255, 255),
+                TextColor3 = Color3.fromRGB(191, 135, 232),
                 Text = name,
                 Font = toggled and Enum.Font.GothamSemibold or Enum.Font.Gotham,
                 Parent = tabTogglesHolder
@@ -1141,7 +1141,7 @@ function initLibrary()
                         ZIndex = 4,
                         Size = UDim2.new((default - min) / (max - min), 0, 1, 0),
                         BorderSizePixel = 0,
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(191, 135, 232),
                         Parent = slider
                     })
                     
