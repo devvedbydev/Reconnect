@@ -153,7 +153,7 @@ function initLibrary()
     local library = utility.table{
         flags = {}, 
         toggled = true,
-        color = Color3.fromRGB(255, 255, 255),
+        color = Color3.fromRGB(237, 171, 255),
         keybind = Enum.KeyCode.Insert, 
         dragSpeed = 0.1
     }    
@@ -322,7 +322,7 @@ function initLibrary()
         local name = options.name or "Epic UI Library"
         local sizeX = options.sizeX or 466
         local sizeY = options.sizeY or 350
-        local color = options.color or Color3.fromRGB(255, 255, 255)
+        local color = options.color or Color3.fromRGB(237, 171, 255)
         local dragSpeed = options.dragSpeed or 0
 
 
@@ -369,7 +369,7 @@ function initLibrary()
             Size = UDim2.new(1, -8, 1, -64),
             BackgroundTransparency = 1,
             Position = UDim2.new(0, 4, 0, 58),
-            BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+            BackgroundColor3 = Color3.fromRGB(237, 171, 255),
             Parent = main
         })
         
@@ -422,7 +422,7 @@ function initLibrary()
             local tabToggle = utility.create("TextButton", {
                 ZIndex = 3,
                 BackgroundTransparency = 1,
-                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                 FontSize = Enum.FontSize.Size14,
                 TextSize = 14,
                 TextColor3 = Color3.fromRGB(237, 171, 255),
@@ -437,7 +437,7 @@ function initLibrary()
             local tab = utility.create("Frame", {
                 Size = UDim2.new(1, 0, 1, 0),
                 BackgroundTransparency = 1,
-                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                 Visible = toggled,
                 Parent = tabs
             })
@@ -447,7 +447,7 @@ function initLibrary()
                 BackgroundTransparency = 1,
                 Active = true,
                 BorderSizePixel = 0,
-                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                 ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0),
                 ScrollBarImageTransparency = 1,
                 ScrollBarThickness = 0,
@@ -473,7 +473,7 @@ function initLibrary()
                 Position = UDim2.new(0.5, 2, 0, 0),
                 Active = true,
                 BorderSizePixel = 0,
-                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                 ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0),
                 ScrollBarImageTransparency = 1,
                 ScrollBarThickness = 0,
@@ -534,7 +534,7 @@ function initLibrary()
                 local sectionHolder = utility.create("Frame", {
                     Size = UDim2.new(1, 0, 0, 26),
                     BackgroundTransparency = 1,
-                    BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                    BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                     Parent = columnFrame
                 })
                 
@@ -561,7 +561,7 @@ function initLibrary()
                     Size = UDim2.new(0, 0, 1, 0),
                     BackgroundTransparency = 1,
                     Position = UDim2.new(0, 8, 0, 0),
-                    BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                    BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                     FontSize = Enum.FontSize.Size14,
                     TextSize = 13,
                     TextColor3 = Color3.fromRGB(237, 171, 255),
@@ -610,7 +610,7 @@ function initLibrary()
                         Size = UDim2.new(0, 0, 0, 14),
                         BackgroundTransparency = 1,
                         Position = UDim2.new(0, 8, 0, 0),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
                         Text = text,
@@ -649,7 +649,7 @@ function initLibrary()
                         Size = UDim2.new(1, 0, 0, 14),
                         BackgroundTransparency = 1,
                         Position = UDim2.new(0, 8, 0, 0),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
                         Text = text,
@@ -664,7 +664,7 @@ function initLibrary()
                         Size = UDim2.new(1, 0, 0, 1),
                         Position = UDim2.new(0, 0, 0.5, 1),
                         BorderSizePixel = 0,
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         Parent = specialLabel
                     })
                     
@@ -717,7 +717,7 @@ function initLibrary()
                         Size = UDim2.new(1, 0, 0, 16),
                         BorderColor3 = Color3.fromRGB(22, 22, 22),
                         Font = 2,
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         Text = "",
                         TextXAlignment = Enum.TextXAlignment.Left,
                         Parent = sectionContent
@@ -807,7 +807,7 @@ function initLibrary()
                         Size = UDim2.new(0, 14, 1, -2),
                         BorderColor3 = Color3.fromRGB(37, 37, 37),
                         Position = UDim2.new(0, 0, 0, 1),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         Parent = toggle
                     })
 
@@ -826,7 +826,7 @@ function initLibrary()
                         Size = UDim2.new(0, 0, 1, 0),
                         BackgroundTransparency = 1,
                         Position = UDim2.new(1, 7, 0, 0),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
@@ -848,7 +848,7 @@ function initLibrary()
                         end
 
 
-                        local textColor = toggled and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(255, 255, 255)
+                        local textColor = toggled and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(237, 171, 255)
                         local gradientColor
                         if toggled then
                             gradientColor = ColorSequence.new{
@@ -950,7 +950,7 @@ function initLibrary()
                     local boxHolder = utility.create("Frame", {
                         Size = UDim2.new(1, 0, 0, 36),
                         BackgroundTransparency = 1,
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         Parent = sectionContent
                     })
                     
@@ -960,7 +960,7 @@ function initLibrary()
                         BorderColor3 = Color3.fromRGB(22, 22, 22),
                         BackgroundTransparency = 1,
                         Position = UDim2.new(0, 0, 1, -16),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size12,
                         TextSize = 12,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
@@ -976,7 +976,7 @@ function initLibrary()
                         Size = UDim2.new(1, 0, 1, 0),
                         BorderColor3 = Color3.fromRGB(22, 22, 22),
                         Position = UDim2.new(0, 0, 0, 0),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         Parent = box
                     })
 
@@ -991,7 +991,7 @@ function initLibrary()
                         ZIndex = 3,
                         Size = UDim2.new(0, 0, 0, 16),
                         BackgroundTransparency = 1,
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
@@ -1133,7 +1133,7 @@ function initLibrary()
                         Size = UDim2.new(1, 0, 0, 16),
                         BorderColor3 = Color3.fromRGB(22, 22, 22),
                         Position = UDim2.new(0, 0, 1, -13),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         Parent = sectionContent
                     })
                     
@@ -1141,7 +1141,7 @@ function initLibrary()
                         ZIndex = 4,
                         Size = UDim2.new((default - min) / (max - min), 0, 1, 0),
                         BorderSizePixel = 0,
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         Parent = slider
                     })
                     
@@ -1171,7 +1171,7 @@ function initLibrary()
                         ZIndex = 5,
                         Size = UDim2.new(1, 0, 1, 0),
                         BackgroundTransparency = 1,
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size12,
                         TextSize = 12,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
@@ -1338,7 +1338,7 @@ function initLibrary()
                     local toggleSliderHolder = utility.create("Frame", {
                         Size = UDim2.new(1, 0, 0, 35),
                         BackgroundTransparency = 1,
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         Parent = sectionContent
                     })
                     
@@ -1347,7 +1347,7 @@ function initLibrary()
                         Size = UDim2.new(1, 0, 0, 16),
                         BorderColor3 = Color3.fromRGB(22, 22, 22),
                         Position = UDim2.new(0, 0, 1, -16),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         Parent = toggleSliderHolder
                     })
                     
@@ -1355,7 +1355,7 @@ function initLibrary()
                         ZIndex = 4,
                         Size = UDim2.new((default - min) / (max - min), 0, 1, 0),
                         BorderSizePixel = 0,
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         Parent = slider
                     })
                     
@@ -1381,7 +1381,7 @@ function initLibrary()
                         ZIndex = 5,
                         Size = UDim2.new(1, 0, 1, 0),
                         BackgroundTransparency = 1,
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size12,
                         TextSize = 12,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
@@ -1394,7 +1394,7 @@ function initLibrary()
                     local toggle = utility.create("TextButton", {
                         Size = UDim2.new(1, 0, 0, 16),
                         BackgroundTransparency = 1,
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 14,
                         TextColor3 = Color3.fromRGB(0, 0, 0),
@@ -1407,7 +1407,7 @@ function initLibrary()
                         Size = UDim2.new(0, 14, 1, -2),
                         BorderColor3 = Color3.fromRGB(37, 37, 37),
                         Position = UDim2.new(0, 0, 0, 1),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         Text = "",
                         Parent = toggle
                     })
@@ -1426,7 +1426,7 @@ function initLibrary()
                         Size = UDim2.new(0, 0, 1, 0),
                         BackgroundTransparency = 1,
                         Position = UDim2.new(1, 7, 0, 0),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
@@ -1448,7 +1448,7 @@ function initLibrary()
                         end
 
 
-                        local textColor = toggled and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(255, 255, 255)
+                        local textColor = toggled and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(237, 171, 255)
                         local gradientColor
                         if toggled then
                             gradientColor = ColorSequence.new{
@@ -1642,7 +1642,7 @@ function initLibrary()
                     local dropdownHolder = utility.create("Frame", {
                         Size = UDim2.new(1, 0, 0, 36),
                         BackgroundTransparency = 1,
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         Parent = sectionContent
                     })
                     
@@ -1650,7 +1650,7 @@ function initLibrary()
                         ZIndex = 3,
                         Size = UDim2.new(0, 0, 0, 16),
                         BackgroundTransparency = 1,
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
@@ -1665,7 +1665,7 @@ function initLibrary()
                         Size = UDim2.new(1, 0, 0, 16),
                         BorderColor3 = Color3.fromRGB(22, 22, 22),
                         Position = UDim2.new(0, 0, 0, 20),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         Text = "",
                         Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
@@ -1685,7 +1685,7 @@ function initLibrary()
                         Position = UDim2.new(0, 8, 0, 0),
                         FontSize = Enum.FontSize.Size12,
                         TextSize = 12,
-                        TextColor3 = (multiChoice and (#default > 0 and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(255, 255, 255))) or default and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(255, 255, 255),
+                        TextColor3 = (multiChoice and (#default > 0 and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(237, 171, 255))) or default and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(237, 171, 255),
                         Text = multiChoice and (#default > 0 and table.concat(default, ", ") or "NONE") or (default or "NONE"),
                         Font = 2,
                         TextXAlignment = Enum.TextXAlignment.Left,
@@ -1698,7 +1698,7 @@ function initLibrary()
                         Rotation = 180,
                         BackgroundTransparency = 1,
                         Position = UDim2.new(1, -16, 0, 1),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         Image = "http://www.roblox.com/asset/?id=8747047318",
                         Parent = open
                     })
@@ -1716,7 +1716,7 @@ function initLibrary()
                     local contentHolder = utility.create("Frame", {
                         Size = UDim2.new(1, 0, 1, -4),
                         Position = UDim2.new(0, 0, 0, 2),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         Parent = contentFrame
                     })
 
@@ -1751,7 +1751,7 @@ function initLibrary()
 
                         obj.Font = bool and 2 or 2
                         padding.PaddingLeft = bool and UDim.new(0, 10) or UDim.new(0, 6)
-                        value.TextColor3 = bool and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(255, 255, 255)
+                        value.TextColor3 = bool and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(237, 171, 255)
                     end
 
 
@@ -1769,7 +1769,7 @@ function initLibrary()
                             ZIndex = 11,
                             Size = UDim2.new(1, 0, 0, 14),
                             BackgroundTransparency = 1,
-                            BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                            BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                             FontSize = Enum.FontSize.Size12,
                             TextSize = 12,
                             TextColor3 = Color3.fromRGB(237, 171, 255),
@@ -1831,7 +1831,7 @@ function initLibrary()
 
 
                                     multiSelectObj(option, optionPadding, false)
-                                    value.TextColor3 = #chosen > 0 and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(255, 255, 255)
+                                    value.TextColor3 = #chosen > 0 and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(237, 171, 255)
                                     value.Text = #chosen > 0 and table.concat(chosen, ", ") or "NONE"
 
 
@@ -1970,7 +1970,7 @@ function initLibrary()
                             ZIndex = 11,
                             Size = UDim2.new(1, 0, 0, 14),
                             BackgroundTransparency = 1,
-                            BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                            BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                             FontSize = Enum.FontSize.Size12,
                             TextSize = 12,
                             TextColor3 = Color3.fromRGB(237, 171, 255),
@@ -2032,7 +2032,7 @@ function initLibrary()
 
 
                                     multiSelectObj(option, optionPadding, false)
-                                    value.TextColor3 = #chosen > 0 and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(255, 255, 255)
+                                    value.TextColor3 = #chosen > 0 and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(237, 171, 255)
                                     value.Text = #chosen > 0 and table.concat(chosen, ", ") or "NONE"
 
 
@@ -2062,7 +2062,7 @@ function initLibrary()
                             else
                                 if table.find(chosen, opt) then
                                     table.remove(chosen, table.find(chosen, opt))
-                                    value.TextColor3 = #chosen > 0 and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(255, 255, 255)
+                                    value.TextColor3 = #chosen > 0 and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(237, 171, 255)
                                     value.Text = #chosen > 0 and table.concat(chosen, ", ") or "NONE"
                                 end
 
@@ -2093,7 +2093,7 @@ function initLibrary()
                                 ZIndex = 11,
                                 Size = UDim2.new(1, 0, 0, 14),
                                 BackgroundTransparency = 1,
-                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                                 FontSize = Enum.FontSize.Size12,
                                 TextSize = 12,
                                 TextColor3 = Color3.fromRGB(237, 171, 255),
@@ -2148,7 +2148,7 @@ function initLibrary()
                                         table.remove(chosen, table.find(chosen, opt))
         
                                         multiSelectObj(option, optionPadding, false)
-                                        value.TextColor3 = #chosen > 0 and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(255, 255, 255)
+                                        value.TextColor3 = #chosen > 0 and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(237, 171, 255)
                                         value.Text = #chosen > 0 and table.concat(chosen, ", ") or "NONE"
         
                                         if flag then
@@ -2251,7 +2251,7 @@ function initLibrary()
                     local keybind = utility.create("TextButton", {
                         Size = UDim2.new(1, 0, 0, 16),
                         BackgroundTransparency = 1,
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 14,
                         TextColor3 = Color3.fromRGB(0, 0, 0),
@@ -2263,7 +2263,7 @@ function initLibrary()
                         ZIndex = 3,
                         Size = UDim2.new(0, 0, 1, 0),
                         BackgroundTransparency = 1,
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
@@ -2498,7 +2498,7 @@ function initLibrary()
                     local toggleKeybind = utility.create("TextButton", {
                         Size = UDim2.new(1, 0, 0, 16),
                         BackgroundTransparency = 1,
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 14,
                         TextColor3 = Color3.fromRGB(0, 0, 0),
@@ -2512,7 +2512,7 @@ function initLibrary()
                         Size = UDim2.new(0, 0, 1, 0),
                         BackgroundTransparency = 1,
                         Position = UDim2.new(0, 21, 0, 0),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
@@ -2528,7 +2528,7 @@ function initLibrary()
                         Size = UDim2.new(0, 14, 1, -2),
                         BorderColor3 = Color3.fromRGB(37, 37, 37),
                         Position = UDim2.new(0, 0, 0, 1),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         Parent = toggleKeybind
                     })
                     
@@ -2541,7 +2541,7 @@ function initLibrary()
                     local value = utility.create("TextButton", {
                         ZIndex = 3,
                         BackgroundTransparency = 1,
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
@@ -2567,7 +2567,7 @@ function initLibrary()
                         end
 
 
-                        local textColor = toggled and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(255, 255, 255)
+                        local textColor = toggled and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(237, 171, 255)
                         local gradientColor
                         if toggled then
                             gradientColor = ColorSequence.new{
@@ -2741,7 +2741,7 @@ function initLibrary()
                 function sectionTypes:ColorPicker(opts)
                     local options = utility.table(opts)
                     local name = options.name or "Color Picker"
-                    local default = options.default or Color3.fromRGB(255, 255, 255)
+                    local default = options.default or Color3.fromRGB(237, 171, 255)
                     local flag = options.flag
                     local callback = options.callback or function() end
 
@@ -2776,7 +2776,7 @@ function initLibrary()
                     local colorPicker = utility.create("TextButton", {
                         Size = UDim2.new(1, 0, 0, 16),
                         BackgroundTransparency = 1,
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 14,
                         TextColor3 = Color3.fromRGB(0, 0, 0),
@@ -2788,7 +2788,7 @@ function initLibrary()
                         ZIndex = 3,
                         Size = UDim2.new(0, 0, 1, 0),
                         BackgroundTransparency = 1,
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
@@ -2810,7 +2810,7 @@ function initLibrary()
                     local iconGradient = utility.create("UIGradient", {
                         Rotation = 90,
                         Color = ColorSequence.new{
-                            ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 255, 255)),
+                            ColorSequenceKeypoint.new(0, Color3.fromRGB(237, 171, 255)),
                             ColorSequenceKeypoint.new(1, Color3.fromRGB(105, 105, 105))
                         },
                         Parent = icon
@@ -2841,7 +2841,7 @@ function initLibrary()
                         ZIndex = 15,
                         Size = UDim2.new(0, 4, 0, 4),
                         Position = UDim2.new(0, 5, 0, 5),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         BorderColor3 = Color3.fromRGB(0, 0, 0),
                         BorderSizePixel = 1,
                         Parent = saturationFrame
@@ -2864,7 +2864,7 @@ function initLibrary()
                         ZIndex = 15,
                         Size = UDim2.new(1, 0, 0, 2),
                         Position = UDim2.new(0, 0, 0, 10),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         BorderColor3 = Color3.fromRGB(0, 0, 0),
                         BorderSizePixel = 1,
                         Parent = hueFrame
@@ -2876,7 +2876,7 @@ function initLibrary()
                         BackgroundTransparency = 1,
                         Position = UDim2.new(0, 5, 1, -42),
                         BackgroundColor3 = Color3.fromRGB(30, 30, 30),
-                        PlaceholderColor3 = Color3.fromRGB(255, 255, 255),
+                        PlaceholderColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size12,
                         TextSize = 12,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
@@ -2891,7 +2891,7 @@ function initLibrary()
                         ZIndex = 13,
                         Size = UDim2.new(1, 0, 1, 0),
                         BorderColor3 = Color3.fromRGB(22, 22, 22),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         Parent = rgb
                     })
                     
@@ -2907,7 +2907,7 @@ function initLibrary()
                         BackgroundTransparency = 1,
                         Position = UDim2.new(0, 5, 1, -21),
                         BackgroundColor3 = Color3.fromRGB(30, 30, 30),
-                        PlaceholderColor3 = Color3.fromRGB(255, 255, 255),
+                        PlaceholderColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size12,
                         TextSize = 12,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
@@ -2922,7 +2922,7 @@ function initLibrary()
                         ZIndex = 13,
                         Size = UDim2.new(1, 0, 1, 0),
                         BorderColor3 = Color3.fromRGB(22, 22, 22),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         Parent = hex
                     })
                     
@@ -3159,7 +3159,7 @@ function initLibrary()
                 function sectionTypes:ToggleColorPicker(opts)
                     local options = utility.table(opts)
                     local name = options.name or "Toggle Color Picker"
-                    local default = options.default or Color3.fromRGB(255, 255, 255)
+                    local default = options.default or Color3.fromRGB(237, 171, 255)
                     local toggleFlag = options.toggleFlag
                     local colorPickerFlag = options.colorPickerFlag
                     local toggleCallback = options.toggleCallback or function() end
@@ -3205,7 +3205,7 @@ function initLibrary()
                     local colorPicker = utility.create("TextButton", {
                         Size = UDim2.new(1, 0, 0, 16),
                         BackgroundTransparency = 1,
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 14,
                         TextColor3 = Color3.fromRGB(0, 0, 0),
@@ -3219,7 +3219,7 @@ function initLibrary()
                         Size = UDim2.new(0, 14, 1, -2),
                         BorderColor3 = Color3.fromRGB(37, 37, 37),
                         Position = UDim2.new(0, 0, 0, 1),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         Parent = colorPicker
                     })
                     
@@ -3243,7 +3243,7 @@ function initLibrary()
                     local colorPickerIconGradient = utility.create("UIGradient", {
                         Rotation = 90,
                         Color = ColorSequence.new{
-                            ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 255, 255)),
+                            ColorSequenceKeypoint.new(0, Color3.fromRGB(237, 171, 255)),
                             ColorSequenceKeypoint.new(1, Color3.fromRGB(105, 105, 105))
                         },
                         Parent = colorPickerIcon
@@ -3254,7 +3254,7 @@ function initLibrary()
                         Size = UDim2.new(0, 0, 1, 0),
                         BackgroundTransparency = 1,
                         Position = UDim2.new(1, 7, 0, 0),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size14,
                         TextSize = 13,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
@@ -3289,7 +3289,7 @@ function initLibrary()
                         ZIndex = 15,
                         Size = UDim2.new(0, 4, 0, 4),
                         Position = UDim2.new(0, 5, 0, 5),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         BorderColor3 = Color3.fromRGB(0, 0, 0),
                         BorderSizePixel = 1,
                         Parent = saturationFrame
@@ -3312,7 +3312,7 @@ function initLibrary()
                         ZIndex = 15,
                         Size = UDim2.new(1, 0, 0, 2),
                         Position = UDim2.new(0, 0, 0, 10),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         BorderColor3 = Color3.fromRGB(0, 0, 0),
                         BorderSizePixel = 1,
                         Parent = hueFrame
@@ -3324,7 +3324,7 @@ function initLibrary()
                         BackgroundTransparency = 1,
                         Position = UDim2.new(0, 5, 1, -42),
                         BackgroundColor3 = Color3.fromRGB(30, 30, 30),
-                        PlaceholderColor3 = Color3.fromRGB(255, 255, 255),
+                        PlaceholderColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size12,
                         TextSize = 12,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
@@ -3339,7 +3339,7 @@ function initLibrary()
                         ZIndex = 13,
                         Size = UDim2.new(1, 0, 1, 0),
                         BorderColor3 = Color3.fromRGB(22, 22, 22),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         Parent = rgb
                     })
                     
@@ -3355,7 +3355,7 @@ function initLibrary()
                         BackgroundTransparency = 1,
                         Position = UDim2.new(0, 5, 1, -21),
                         BackgroundColor3 = Color3.fromRGB(30, 30, 30),
-                        PlaceholderColor3 = Color3.fromRGB(255, 255, 255),
+                        PlaceholderColor3 = Color3.fromRGB(237, 171, 255),
                         FontSize = Enum.FontSize.Size12,
                         TextSize = 12,
                         TextColor3 = Color3.fromRGB(237, 171, 255),
@@ -3370,7 +3370,7 @@ function initLibrary()
                         ZIndex = 13,
                         Size = UDim2.new(1, 0, 1, 0),
                         BorderColor3 = Color3.fromRGB(22, 22, 22),
-                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundColor3 = Color3.fromRGB(237, 171, 255),
                         Parent = hex
                     })
                     
@@ -3392,7 +3392,7 @@ function initLibrary()
                         end
 
 
-                        local textColor = toggled and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(255, 255, 255)
+                        local textColor = toggled and Color3.fromRGB(237, 171, 255) or Color3.fromRGB(237, 171, 255)
                         local gradientColor
                         if toggled then
                             gradientColor = ColorSequence.new{
