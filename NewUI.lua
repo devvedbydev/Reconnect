@@ -153,7 +153,7 @@ function initLibrary()
     local library = utility.table{
         flags = {}, 
         toggled = true,
-        color = Color3.fromRGB(255, 0, 0),
+        color = Color3.fromRGB(191, 135, 232),
         keybind = Enum.KeyCode.Insert, 
         dragSpeed = 0.1
     }    
