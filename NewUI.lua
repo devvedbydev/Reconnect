@@ -245,14 +245,6 @@ function Assets:Window(ScreenAsset,Window)
 		Window.Size = Size
 	end)
 
-	local Month = tonumber(os.date("%m"))
-	if Month == 12 or Month == 1 then task.spawn(Assets.Snowflakes,WindowAsset) end
-	WindowAsset.TabButtonContainer.ListLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
-		WindowAsset.TabButtonContainer.CanvasSize = UDim2.fromOffset(
-			WindowAsset.TabButtonContainer.ListLayout.AbsoluteContentSize.X,0
-		)
-	end)
-
 	UserInputService.InputChanged:Connect(function(Input)
 		if WindowAsset.Visible and Input.UserInputType == Enum.UserInputType.MouseMovement then
 			local Mouse = UserInputService:GetMouseLocation()
