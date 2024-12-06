@@ -1,3 +1,3 @@
-local HWID = (function() for k, v in pairs(game:GetService("HttpService"):JSONDecode(request({Url = "https://httpbin.org/get", Method = "GET"}).Body).headers) do if string.match(k, "-Fingerprint") then return v end end end)()
+local HWID = (function() local success, result = pcall(function() return game:GetService("HttpService"):JSONDecode(request({Url = "https://httpbingo.org/get", Method = "GET"}).Body).headers end) if not success then success, result = pcall(function() return game:GetService("HttpService"):JSONDecode(request({Url = "https://httpbin.org/get", Method = "GET"}).Body).headers end) end if success then for k, v in pairs(result) do if string.match(k, "-Fingerprint") then return type(v) == "table" and table.concat(v, ", ") or v end end else game.Players.LocalPlayer:Kick("Failed to get HWID: " .. tostring(result)) return false end end)()
 setclipboard(HWID)
 print("HWID Set to clipboard, now do 'register <your-hwid>' in bot commands.")
