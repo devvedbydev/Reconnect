@@ -58,7 +58,7 @@ function MacLib:Window(Settings)
 	local notifications = Instance.new("Frame")
 	notifications.Name = "Notifications"
 	notifications.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	notifications.BackgroundTransparency = 1
+	notifications.BackgroundTransparency = 0
 	notifications.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	notifications.BorderSizePixel = 0
 	notifications.Size = UDim2.fromScale(1, 1)
