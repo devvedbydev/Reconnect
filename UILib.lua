@@ -59,7 +59,7 @@ function MacLib:Window(Settings)
 	macLib.IgnoreGuiInset = true
 	macLib.ScreenInsets = Enum.ScreenInsets.None
 	macLib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-	macLib.Parent = clonref(game:GetService("CoreGui")) or game:GetService("CoreGui")
+	macLib.Parent = game:GetService("CoreGui")
 
 	local notifications = Instance.new("Frame")
 	notifications.Name = "Notifications"
