@@ -13,6 +13,7 @@ local isStudio = RunService:IsStudio()
 local LocalPlayer = Players.LocalPlayer
 
 local windowState
+local acrylicBlur
 local hasGlobalSetting
 
 local tabs = {}
@@ -45,6 +46,11 @@ end
 --// Library Functions
 function MacLib:Window(Settings)
 	local WindowFunctions = {Settings = Settings}
+	if Settings.AcrylicBlur ~= nil then
+		acrylicBlur = Settings.AcrylicBlur
+	else
+		acrylicBlur = true
+	end
 
 	local macLib = Instance.new("ScreenGui")
 	macLib.Name = "MacLib"
@@ -53,12 +59,12 @@ function MacLib:Window(Settings)
 	macLib.IgnoreGuiInset = true
 	macLib.ScreenInsets = Enum.ScreenInsets.None
 	macLib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-	macLib.Parent = (isStudio and LocalPlayer.PlayerGui) or cloneref(game:GetService("CoreGui"))
+	macLib.Parent = (isStudio and LocalPlayer.PlayerGui) or clonref(game:GetService("CoreGui"))
 
 	local notifications = Instance.new("Frame")
 	notifications.Name = "Notifications"
 	notifications.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	notifications.BackgroundTransparency = 0
+	notifications.BackgroundTransparency = 1
 	notifications.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	notifications.BorderSizePixel = 0
 	notifications.Size = UDim2.fromScale(1, 1)
@@ -85,7 +91,7 @@ function MacLib:Window(Settings)
 	base.Name = "Base"
 	base.AnchorPoint = Vector2.new(0.5, 0.5)
 	base.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-	base.BackgroundTransparency = 1
+	base.BackgroundTransparency = Settings.AcrylicBlur and 0.05 or 0
 	base.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	base.BorderSizePixel = 0
 	base.Position = UDim2.fromScale(0.5, 0.5)
@@ -1113,7 +1119,7 @@ function MacLib:Window(Settings)
 	end
 
 	local function UpdateOrientation(fetchProps)
-		if not IsVisible(frame) or unloaded then
+		if not IsVisible(frame) or not acrylicBlur or unloaded then
 			for _, pt in pairs(parts) do
 				pt.Parent = nil
 				DepthOfField.Enabled = false
@@ -5296,6 +5302,15 @@ function MacLib:Window(Settings)
 		MenuKeybind = Keycode
 	end
 
+	function WindowFunctions:SetAcrylicBlurState(State)
+		acrylicBlur = State
+		base.BackgroundTransparency = State and 0.05 or 0
+	end
+
+	function WindowFunctions:GetAcrylicBlurState()
+		return acrylicBlur
+	end
+
 	local function _SetUserInfoState(State)
 		if State then
 			headshot.Image = (isReady and headshotImage) or "rbxassetid://0"
@@ -5592,14 +5607,15 @@ function MacLib:Demo()
 		DisabledWindowControls = {},
 		ShowUserInfo = true,
 		Keybind = Enum.KeyCode.RightControl,
-		AcrylicBlur = false,
+		AcrylicBlur = true,
 	})
 
 	local globalSettings = {
 		UIBlurToggle = Window:GlobalSetting({
 			Name = "UI Blur",
-			Default = false,
+			Default = Window:GetAcrylicBlurState(),
 			Callback = function(bool)
+				Window:SetAcrylicBlurState(bool)
 				Window:Notify({
 					Title = Window.Settings.Title,
 					Description = (bool and "Enabled" or "Disabled") .. " UI Blur",
