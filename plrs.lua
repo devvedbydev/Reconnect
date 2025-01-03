@@ -38,7 +38,7 @@ global.declare(features, "visuals", {
     ["teamColor"] = false,
     ["renderDistance"] = 2000,
     ["boxes"] = {
-        ["enabled"] = true,
+        ["enabled"] = false,
         ["color"] = Color3.fromRGB(255, 255, 255),
         ["outline"] = {
             ["enabled"] = false,
