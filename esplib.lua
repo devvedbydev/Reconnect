@@ -354,7 +354,9 @@ for _, player in players:GetPlayers() do
 end
 
 declare(get("player"), "added", players.PlayerAdded:Connect(function(player)
-	get("player"):new(player)
+	if player ~= client and not get("player"):find(player) then
+		get("player"):new(player)
+	end
 end), true)
 
 declare(get("player"), "removing", players.PlayerRemoving:Connect(function(player)
