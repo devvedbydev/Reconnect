@@ -205,7 +205,7 @@ get("player").update = function(self, character, data)
 			drawings.boxOutline.ZIndex = drawings.box.ZIndex - 1
 			drawings.boxFilled.ZIndex = drawings.boxOutline.ZIndex - 1
 
-			drawings.name.Text = '{player.Name}`
+			drawings.name.Text = {player.Name}
 			drawings.name.Size = 13
 		        drawings.name.Size = 2
 			drawings.name.Position = Vector2.new(x, (yPostion - drawings.name.TextBounds.Y) - 2)
@@ -234,7 +234,7 @@ get("player").update = function(self, character, data)
 
 			drawings.healthOutline.ZIndex = drawings.health.ZIndex - 1
 
-			drawings.distance.Text = `{math.floor(data.distance)}`
+			drawings.distance.Text = {math.floor(data.distance)}
 			drawings.distance.Size = 13
 			drawings.distance.Font = 2
 			drawings.distance.Position = Vector2.new(x, (yPostion + height) + (drawings.distance.TextBounds.Y * 0.25))
@@ -242,7 +242,7 @@ get("player").update = function(self, character, data)
 			drawings.distance.Outline = visuals.distance.outline.enabled
 			drawings.distance.OutlineColor = visuals.distance.outline.color
 			
-			drawings.weapon.Text = `{weapon}`
+			drawings.weapon.Text = {weapon}
 			drawings.weapon.Size = 13
 			drawings.weapon.Font = 2
 			drawings.weapon.Position = visuals.distance.enabled and Vector2.new(drawings.distance.Position.x, drawings.distance.Position.Y + (drawings.weapon.TextBounds.Y * 0.75)) or drawings.distance.Position
