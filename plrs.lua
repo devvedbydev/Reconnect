@@ -35,41 +35,41 @@ end
 global.declare(features, "visuals", {
     ["enabled"] = true,
     ["teamCheck"] = false,
-    ["teamColor"] = true,
+    ["teamColor"] = false,
     ["renderDistance"] = 2000,
     ["boxes"] = {
         ["enabled"] = true,
         ["color"] = Color3.fromRGB(255, 255, 255),
         ["outline"] = {
-            ["enabled"] = true,
+            ["enabled"] = false,
             ["color"] = Color3.fromRGB(0, 0, 0),
         },
         ["filled"] = {
             ["enabled"] = true,
-            ["color"] = Color3.fromRGB(255, 255, 255),
-            ["transparency"] = 0.25
+            ["color"] = Color3.fromRGB(198, 144, 232),
+            ["transparency"] = 0.20
         },
     },
     ["names"] = {
         ["enabled"] = true,
         ["color"] = Color3.fromRGB(255, 255, 255),
         ["outline"] = {
-            ["enabled"] = true,
+            ["enabled"] = false,
             ["color"] = Color3.fromRGB(0, 0, 0),
         },
     },
     ["health"] = {
         ["enabled"] = true,
-        ["color"] = Color3.fromRGB(0, 255, 0),
-        ["colorLow"] = Color3.fromRGB(255, 0, 0),
+        ["color"] = Color3.fromRGB(198, 144, 232),
+        ["colorLow"] = Color3.fromRGB(255, 255, 255),
         ["outline"] = {
-            ["enabled"] = true,
+            ["enabled"] = false,
             ["color"] = Color3.fromRGB(0, 0, 0)
         },
         ["text"] = {
-            ["enabled"] = true,
+            ["enabled"] = false,
             ["outline"] = {
-                ["enabled"] = true,
+                ["enabled"] = false,
             },
         }
     },
@@ -77,15 +77,15 @@ global.declare(features, "visuals", {
         ["enabled"] = true,
         ["color"] = Color3.fromRGB(255, 255, 255),
         ["outline"] = {
-            ["enabled"] = true,
-            ["color"] = Color3.fromRGB(0, 0, 0),
+            ["enabled"] = false,
+            ["color"] = Color3.fromRGB(255, 255, 255),
         },
     },
     ["weapon"] = {
         ["enabled"] = true,
-        ["color"] = Color3.fromRGB(255, 255, 255),
+        ["color"] = Color3.fromRGB(198, 144, 232),
         ["outline"] = {
-            ["enabled"] = true,
+            ["enabled"] = false,
             ["color"] = Color3.fromRGB(0, 0, 0),
         },
     }
