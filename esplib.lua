@@ -155,8 +155,9 @@ get("player").update = function(self, character, data)
 	end
 
 	local player = data.player
-	local root = character.HumanoidRootPart
-	local humanoid = character.Humanoid
+	local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	local root = character:WaitForChild("HumanoidRootPart")
+	local humanoid = character:WaitForChild("Humanoid")
 	local drawings = data.drawings
 
 	if self:check(client) then
