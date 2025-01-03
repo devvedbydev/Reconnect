@@ -1,6 +1,7 @@
 local players = cloneref(game:GetService("Players"))
 local client = players.LocalPlayer
 local camera = workspace.CurrentCamera
+
 getgenv().global = getgenv()
 
 function global.declare(self, index, value, check)
@@ -51,17 +52,17 @@ get("loop").new = function(self, index, func, disabled)
 end
 
 declare(get("loop"), "connection", cloneref(game:GetService("RunService")).RenderStepped:Connect(function(delta)
-    for _, loop in get("loop").cache do
-        if loop.enabled then
-            local success, result = pcall(function()
-                loop.func(delta)
-            end)
+	for _, loop in get("loop").cache do
+		if loop.enabled then
+			local success, result = pcall(function()
+				loop.func(delta)
+			end)
 
-            if not success then
-                return
-            end
-        end
-    end
+			if not success then
+				warn(result)
+			end
+		end
+	end
 end), true)
 
 declare(services, "new", {})
@@ -99,6 +100,7 @@ end
 
 get("player").new = function(self, player)
 	local function cache(character)
+		print("caching", character)
 		self.cache[character] = {
 			["player"] = player,
 			["drawings"] = {
@@ -132,6 +134,7 @@ get("player").new = function(self, player)
 end
 
 get("player").remove = function(self, player)
+	print("removing", player)
 	if player:IsA("Player") then
 		local character = self:find(player)
 		if character then
@@ -202,9 +205,8 @@ get("player").update = function(self, character, data)
 			drawings.boxOutline.ZIndex = drawings.box.ZIndex - 1
 			drawings.boxFilled.ZIndex = drawings.boxOutline.ZIndex - 1
 
-			drawings.name.Text = player.Name
-			drawings.name.Size = 13
-			drawings.name.Font = 2
+			drawings.name.Text = `[ {player.Name} ]`
+			drawings.name.Size = math.max(math.min(math.abs(12.5 * scale), 12.5), 10)
 			drawings.name.Position = Vector2.new(x, (yPostion - drawings.name.TextBounds.Y) - 2)
 			drawings.name.Color = color(visuals.names.color)
 			drawings.name.Outline = visuals.names.outline.enabled
@@ -218,9 +220,8 @@ get("player").update = function(self, character, data)
 			drawings.healthOutline.To = Vector2.new(xPosition - 5, yPostion + height)
 			drawings.health.From = Vector2.new(xPosition - 5, (yPostion + height) - 1)
 			drawings.health.To = Vector2.new(xPosition - 5, ((drawings.health.From.Y - ((height / 100) * healthPercent))) + 2)
-			drawings.healthText.Text = HP {math.floor(humanoid.Health)}
-			drawings.healthText.Size = 13
-			drawings.healthText.Font = 2
+			drawings.healthText.Text = `[ HP {math.floor(humanoid.Health)} ]`
+			drawings.healthText.Size = math.max(math.min(math.abs(11 * scale), 11), 10)
 			drawings.healthText.Position = Vector2.new(drawings.health.To.X - (drawings.healthText.TextBounds.X + 3), (drawings.health.To.Y - (2 / scale)))
 
 			drawings.health.Color = visuals.health.colorLow:Lerp(visuals.health.color, healthPercent * 0.01)
@@ -232,17 +233,15 @@ get("player").update = function(self, character, data)
 
 			drawings.healthOutline.ZIndex = drawings.health.ZIndex - 1
 
-			drawings.distance.Text = {math.floor(data.distance)}
-			drawings.distance.Size = 13
-			drawings.distance.Font = 2
+			drawings.distance.Text = `[ {math.floor(data.distance)} ]`
+			drawings.distance.Size = math.max(math.min(math.abs(11 * scale), 11), 10)
 			drawings.distance.Position = Vector2.new(x, (yPostion + height) + (drawings.distance.TextBounds.Y * 0.25))
 			drawings.distance.Color = color(visuals.distance.color)
 			drawings.distance.Outline = visuals.distance.outline.enabled
 			drawings.distance.OutlineColor = visuals.distance.outline.color
 			
-			drawings.weapon.Text = weapon
-			drawings.weapon.Size = 13
-			drawings.weapon.Font = 2
+			drawings.weapon.Text = `[ {weapon} ]`
+			drawings.weapon.Size = math.max(math.min(math.abs(11 * scale), 11), 10)
 			drawings.weapon.Position = visuals.distance.enabled and Vector2.new(drawings.distance.Position.x, drawings.distance.Position.Y + (drawings.weapon.TextBounds.Y * 0.75)) or drawings.distance.Position
 			drawings.weapon.Color = color(visuals.weapon.color)
 			drawings.weapon.Outline = visuals.weapon.outline.enabled
@@ -254,7 +253,6 @@ get("player").update = function(self, character, data)
 		drawings.boxOutline.Visible = (check() and drawings.box.Visible and visuals.boxes.outline.enabled)
 		drawings.name.Visible = (check() and visible and visuals.names.enabled)
 		drawings.health.Visible = (check() and visible and visuals.health.enabled)
-		drawings.health.Thickness = 3
 		drawings.healthOutline.Visible = (check() and drawings.health.Visible and visuals.health.outline.enabled)
 		drawings.healthText.Visible = (check() and drawings.health.Visible and visuals.health.text.enabled)
 		drawings.distance.Visible = (check() and visible and visuals.distance.enabled)
