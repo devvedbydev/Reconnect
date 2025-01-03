@@ -196,7 +196,7 @@ get("player").update = function(self, character, data)
 			drawings.boxOutline.Position = drawings.box.Position
 
 			drawings.box.Color = color(visuals.boxes.color)
-			drawings.box.Thickness = 2
+			drawings.box.Thickness = 1
 			drawings.boxFilled.Color = color(visuals.boxes.filled.color)
 			drawings.boxFilled.Transparency = visuals.boxes.filled.transparency
 			drawings.boxOutline.Color = visuals.boxes.outline.color
@@ -227,7 +227,7 @@ get("player").update = function(self, character, data)
 
 			drawings.health.Color = visuals.health.colorLow:Lerp(visuals.health.color, healthPercent * 0.01)
 			drawings.healthOutline.Color = visuals.health.outline.color
-			drawings.healthOutline.Thickness = 5
+			drawings.healthOutline.Thickness = 10
 			drawings.healthText.Color = drawings.health.Color
 			drawings.healthText.Outline = visuals.health.text.outline.enabled
 			drawings.healthText.OutlineColor = visuals.health.outline.color
