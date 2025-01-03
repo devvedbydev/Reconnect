@@ -207,7 +207,7 @@ get("player").update = function(self, character, data)
 
 			drawings.name.Text = player.Name
 			drawings.name.Size = 13
-		        drawings.name.Size = 2
+		        drawings.name.Font = 2
 			drawings.name.Position = Vector2.new(x, (yPostion - drawings.name.TextBounds.Y) - 2)
 			drawings.name.Color = color(visuals.names.color)
 			drawings.name.Outline = visuals.names.outline.enabled
