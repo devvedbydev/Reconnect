@@ -50,7 +50,7 @@ local ESP = {
             Enabled = true,  
             HealthText = false, Lerp = false, HealthTextRGB = Color3.fromRGB(119, 120, 255),
             Width = 2.5,
-            Gradient = true, GradientRGB1 = Color3.fromRGB(200, 0, 0), GradientRGB2 = Color3.fromRGB(60, 60, 125), GradientRGB3 = Color3.fromRGB(119, 120, 255), 
+            Gradient = true, GradientRGB1 = Color3.fromRGB(129, 46, 230), GradientRGB2 = Color3.fromRGB(105, 64, 156), GradientRGB3 = Color3.fromRGB(168, 127, 219), 
         },
         Boxes = {
             Animate = true,
@@ -359,33 +359,52 @@ do -- Initalize
                                 end
                             end
 
-                            do -- Names
+                            local function isPlayerVisible(player)
+                                local localPlayer = game.Players.LocalPlayer
+                                local localChar = localPlayer.Character
+                                local targetChar = player.Character
+                                if not localChar or not targetChar then return false end
+                            
+                                local startPos = localChar:WaitForChild("Head").Position
+                                local endPos = targetChar:WaitForChild("Head").Position
+                                local direction = endPos - startPos
+                            
+                                local ray = Ray.new(startPos, direction)
+                                local hitPart = workspace:FindPartOnRay(ray, localChar)
+                                
+                                return hitPart == nil or hitPart:IsDescendantOf(targetChar)
+                            end
+
+                            do
                                 Name.Visible = ESP.Drawing.Names.Enabled
+                                local visibilityStatus = isPlayerVisible(plr)
+                                local visibilityFlag = visibilityStatus and "<font color=\"rgb(0, 255, 0)\">V</font>" or "<font color=\"rgb(255, 0, 0)\">I</font>"
+                            
                                 if ESP.Options.Friendcheck and lplayer:IsFriendsWith(plr.UserId) then
-                                    Name.Text = string.format('%s', plr.DisplayName)
+                                    Name.Text = string.format('(%s) %s', visibilityFlag, plr.DisplayName)
                                 else
-                                    Name.Text = string.format('%s', plr.DisplayName)
+                                    Name.Text = string.format('(%s) %s', visibilityFlag, plr.DisplayName)
                                 end
+                            
                                 Name.Position = UDim2.new(0, Pos.X, 0, Pos.Y - h / 2 - 9)
                             end
                             
                             do -- Distance
                                 if ESP.Drawing.Distances.Enabled then
+                                    local visibilityStatus = isPlayerVisible(plr)
+                                    local visibilityFlag = visibilityStatus and "<font color=\"rgb(0, 255, 0)\">V</font>" or "<font color=\"rgb(255, 0, 0)\">I</font>"
+                            
                                     if ESP.Drawing.Distances.Position == "Bottom" then
                                         Weapon.Position = UDim2.new(0, Pos.X, 0, Pos.Y + h / 2 + 18)
-                                        WeaponIcon.Position = UDim2.new(0, Pos.X - 21, 0, Pos.Y + h / 2 + 15);
+                                        WeaponIcon.Position = UDim2.new(0, Pos.X - 21, 0, Pos.Y + h / 2 + 15)
                                         Distance.Position = UDim2.new(0, Pos.X, 0, Pos.Y + h / 2 + 7)
                                         Distance.Text = string.format("%d meters", math.floor(Dist))
                                         Distance.Visible = true
                                     elseif ESP.Drawing.Distances.Position == "Text" then
                                         Weapon.Position = UDim2.new(0, Pos.X, 0, Pos.Y + h / 2 + 8)
-                                        WeaponIcon.Position = UDim2.new(0, Pos.X - 21, 0, Pos.Y + h / 2 + 5);
+                                        WeaponIcon.Position = UDim2.new(0, Pos.X - 21, 0, Pos.Y + h / 2 + 5)
                                         Distance.Visible = false
-                                        if ESP.Options.Friendcheck and lplayer:IsFriendsWith(plr.UserId) then
-                                            Name.Text = string.format('%s [%d]', plr.DisplayName, math.floor(Dist))
-                                        else
-                                            Name.Text = string.format('%s [%d]', plr.DisplayName, math.floor(Dist))
-                                        end
+                                        Name.Text = string.format('(%s) %s [%d]', visibilityFlag, plr.DisplayName, math.floor(Dist))
                                         Name.Visible = ESP.Drawing.Names.Enabled
                                     end
                                 end
