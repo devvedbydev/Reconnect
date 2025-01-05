@@ -144,8 +144,8 @@ do -- Initalize
     });
 
     local DupeCheck = function(plr)
-        if ScreenGui:FindFirstChild(plr.Name) then
-            ScreenGui[plr.Name]:Destroy()
+        if ScreenGui:FindFirstChild(plr.DisplayName) then
+            ScreenGui[plr.DisplayName]:Destroy()
         end
     end
 
@@ -362,9 +362,9 @@ do -- Initalize
                             do -- Names
                                 Name.Visible = ESP.Drawing.Names.Enabled
                                 if ESP.Options.Friendcheck and lplayer:IsFriendsWith(plr.UserId) then
-                                    Name.Text = string.format('%s', plr.Name)
+                                    Name.Text = string.format('%s', plr.DisplayName)
                                 else
-                                    Name.Text = string.format('%s', plr.Name)
+                                    Name.Text = string.format('%s', plr.DisplayName)
                                 end
                                 Name.Position = UDim2.new(0, Pos.X, 0, Pos.Y - h / 2 - 9)
                             end
@@ -382,9 +382,9 @@ do -- Initalize
                                         WeaponIcon.Position = UDim2.new(0, Pos.X - 21, 0, Pos.Y + h / 2 + 5);
                                         Distance.Visible = false
                                         if ESP.Options.Friendcheck and lplayer:IsFriendsWith(plr.UserId) then
-                                            Name.Text = string.format('%s [%d]', plr.Name, math.floor(Dist))
+                                            Name.Text = string.format('%s [%d]', plr.DisplayName, math.floor(Dist))
                                         else
-                                            Name.Text = string.format('%s [%d]', plr.Name, math.floor(Dist))
+                                            Name.Text = string.format('%s [%d]', plr.DisplayName, math.floor(Dist))
                                         end
                                         Name.Visible = ESP.Drawing.Names.Enabled
                                     end
