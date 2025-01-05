@@ -404,7 +404,7 @@ do -- Initalize
                                         Weapon.Position = UDim2.new(0, Pos.X, 0, Pos.Y + h / 2 + 8)
                                         WeaponIcon.Position = UDim2.new(0, Pos.X - 21, 0, Pos.Y + h / 2 + 5)
                                         Distance.Visible = false
-                                        Name.Text = string.format('(%s) %s [%d]', visibilityFlag, plr.Name, math.floor(Dist))
+                                        Name.Text = string.format('(%s) %s [%d]', visibilityFlag, plr.DisplayName, math.floor(Dist))
                                         Name.Visible = ESP.Drawing.Names.Enabled
                                     end
                                 end
