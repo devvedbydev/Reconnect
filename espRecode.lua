@@ -359,13 +359,33 @@ do -- Initalize
                                 end
                             end
 
-                            do -- Names
+                            local function isPlayerVisible(player)
+                                local localPlayer = game.Players.LocalPlayer
+                                local localChar = localPlayer.Character
+                                local targetChar = player.Character
+                                if not localChar or not targetChar then return false end
+                            
+                                local startPos = localChar:WaitForChild("Head").Position
+                                local endPos = targetChar:WaitForChild("Head").Position
+                                local direction = endPos - startPos
+                            
+                                local ray = Ray.new(startPos, direction)
+                                local hitPart = workspace:FindPartOnRay(ray, localChar)
+                                
+                                return hitPart == nil or hitPart:IsDescendantOf(targetChar)
+                            end
+
+                            do
                                 Name.Visible = ESP.Drawing.Names.Enabled
+                                local visibilityStatus = isPlayerVisible(plr)
+                                local visibilityFlag = visibilityStatus and "<font color=\"rgb(0, 255, 0)\">V</font>" or "<font color=\"rgb(255, 0, 0)\">I</font>"
+                            
                                 if ESP.Options.Friendcheck and lplayer:IsFriendsWith(plr.UserId) then
-                                    Name.Text = string.format('%s', plr.DisplayName)
+                                    Name.Text = string.format('(%s) %s', visibilityFlag, plr.DisplayName)
                                 else
-                                    Name.Text = string.format('%s', plr.DisplayName)
+                                    Name.Text = string.format('(%s) %s', visibilityFlag, plr.DisplayName)
                                 end
+                            
                                 Name.Position = UDim2.new(0, Pos.X, 0, Pos.Y - h / 2 - 9)
                             end
                             
