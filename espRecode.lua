@@ -391,21 +391,20 @@ do -- Initalize
                             
                             do -- Distance
                                 if ESP.Drawing.Distances.Enabled then
+                                    local visibilityStatus = isPlayerVisible(plr)
+                                    local visibilityFlag = visibilityStatus and "<font color=\"rgb(0, 255, 0)\">V</font>" or "<font color=\"rgb(255, 0, 0)\">I</font>"
+                            
                                     if ESP.Drawing.Distances.Position == "Bottom" then
                                         Weapon.Position = UDim2.new(0, Pos.X, 0, Pos.Y + h / 2 + 18)
-                                        WeaponIcon.Position = UDim2.new(0, Pos.X - 21, 0, Pos.Y + h / 2 + 15);
+                                        WeaponIcon.Position = UDim2.new(0, Pos.X - 21, 0, Pos.Y + h / 2 + 15)
                                         Distance.Position = UDim2.new(0, Pos.X, 0, Pos.Y + h / 2 + 7)
                                         Distance.Text = string.format("%d meters", math.floor(Dist))
                                         Distance.Visible = true
                                     elseif ESP.Drawing.Distances.Position == "Text" then
                                         Weapon.Position = UDim2.new(0, Pos.X, 0, Pos.Y + h / 2 + 8)
-                                        WeaponIcon.Position = UDim2.new(0, Pos.X - 21, 0, Pos.Y + h / 2 + 5);
+                                        WeaponIcon.Position = UDim2.new(0, Pos.X - 21, 0, Pos.Y + h / 2 + 5)
                                         Distance.Visible = false
-                                        if ESP.Options.Friendcheck and lplayer:IsFriendsWith(plr.UserId) then
-                                            Name.Text = string.format('%s [%d]', plr.DisplayName, math.floor(Dist))
-                                        else
-                                            Name.Text = string.format('%s [%d]', plr.DisplayName, math.floor(Dist))
-                                        end
+                                        Name.Text = string.format('(%s) %s [%d]', visibilityFlag, plr.Name, math.floor(Dist))
                                         Name.Visible = ESP.Drawing.Names.Enabled
                                     end
                                 end
