@@ -130,7 +130,7 @@ end
 
 RunService.RenderStepped:Connect(function()
     for _, Player in ipairs(Players:GetPlayers()) do
-        if Player.Character and Player.Character:FindFirstChild("HumanoidRootPart") then
+        if Player.Character and Player.Character:FindFirstChild("HumanoidRootPart") and Player ~= LocalPlayer then
             if not SkeletonBones[Player] then
                 SkeletonBones[Player] = CreateESP()
             end
