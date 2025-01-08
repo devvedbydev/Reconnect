@@ -1,26 +1,41 @@
 rconsolecreate("")
 rconsolename("[ RECONNECT.WIN ]")
+rconsoleprint("@@WHITE@@")
 rconsoleclear()
-rconsoleprint("@@WHITE@@   Thank you for choosing Reconnect\n")
+rconsoleprint("   Thank you for choosing Reconnect\n")
 
-local staff = {16681869, 47983795, 15680821, 363101315, 25548179, 174212818, 1279177872, 3441886693, 51281722, 156457707, 1249478607, 3544497889, 1534692727, 419652748, 920463550, 41482597, 1661163712, 330990753, 52120772, 6102275375, 661625254, 3004094651, 7178750309, 3576575263, 1147811746}
+local staff = {
+    16681869, 47983795, 15680821, 363101315, 25548179, 174212818,
+    1279177872, 3441886693, 51281722, 156457707, 1249478607, 3544497889,
+    1534692727, 419652748, 920463550, 41482597, 1661163712, 330990753,
+    52120772, 6102275375, 661625254, 3004094651, 7178750309, 3576575263,
+    1147811746
+}
 
-local function log(color, msg)
-    rconsoleprint(color .. "   " .. msg .. "\n@@WHITE@@")
+local function log(color, message)
+    rconsoleprint(color)
+    rconsoleprint("   " .. message .. "\n")
+    rconsoleprint("@@WHITE@@")
 end
-local function notify(plr, act)
-    local staffCheck = table.find(staff, plr.UserId)
-    log(staffCheck and "@@RED@@" or "@@WHITE@@", (act == "join" and "Player Joined: " or "Player Left: ") .. plr.Name .. " (ID: " .. plr.UserId .. ") - " .. (staffCheck and "STAFF" or "NOT STAFF"))
+
+local function notifplr(player, action)
+    local isStaff = table.find(staff, player.UserId)
+    log(isStaff and "@@RED@@" or "@@WHITE@@", 
+        (action == "join" and "Player Joined: " or "Player Left: ") .. 
+        player.Name .. " (ID: " .. player.UserId .. ") - " .. 
+        (isStaff and "STAFF" or "NOT STAFF"))
 end
-local function initialcheck()
+
+local function initcheck()
     local staffFound = false
-    for _, plr in ipairs(game.Players:GetPlayers()) do
-        notify(plr, "join")
-        if table.find(staff, plr.UserId) then staffFound = true end
+    for _, player in ipairs(game.Players:GetPlayers()) do
+        notifplr(player, "join")
+        if table.find(staff, player.UserId) then staffFound = true end
     end
-    log(staffFound and "@@RED@@" or "@@LIGHT_BLUE@@", staffFound and "WARNING: Staff found!" or "INFO: No staff found.")
+    log(staffFound and "@@RED@@" or "@@LIGHT_BLUE@@", 
+        staffFound and "WARNING: Staff member/s found!" or "INFO: No staff members found.")
 end
-initialcheck()
+initcheck()
 
-game.Players.PlayerAdded:Connect(function(plr) notify(plr, "join") end)
-game.Players.PlayerRemoving:Connect(function(plr) notify(plr, "leave") end)
+game.Players.PlayerAdded:Connect(function(player) notifplr(player, "join") end)
+game.Players.PlayerRemoving:Connect(function(player) notifplr(player, "leave") end)
