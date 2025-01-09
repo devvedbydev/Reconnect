@@ -1,20 +1,22 @@
 local LogService = game:GetService("LogService")
 
+appendfile("log.txt", "Log file created at: " .. os.date("%Y-%m-%d %H:%M:%S") .. "\n")
+
 hookfunction(print, function(message)
-    writefile("log.txt", "Print Detected: " .. message .. "\n")
+    appendfile("log.txt", "Print Detected: " .. message .. "\n")
     return message
 end)
 
 hookfunction(warn, function(message)
-    writefile("log.txt", "Warning Detected: " .. message .. "\n")
+    appendfile("log.txt", "Warning Detected: " .. message .. "\n")
     return message
 end)
 
 hookfunction(error, function(message)
-    writefile("log.txt", "Error Detected: " .. message .. "\n")
+    appendfile("log.txt", "Error Detected: " .. message .. "\n")
     return message
 end)
 
 LogService.MessageOut:Connect(function(message, messageType)
-    writefile("log.txt", messageType.Name .. ": " .. message .. "\n")
+    appendfile("log.txt", messageType.Name .. ": " .. message .. "\n")
 end)
