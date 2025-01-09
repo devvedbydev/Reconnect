@@ -13,29 +13,35 @@ local function isBanRelated(message)
     return false
 end
 
-hookfunction(print, function(message)
+local oldPrint = print
+hookfunction(print, function(...)
+    local message = table.concat({...}, " ")
     if isBanRelated(message) then
         appendfile("log.txt", "BAN Detected: " .. message .. "\n")
     else
         appendfile("log.txt", "Print Detected: " .. message .. "\n")
     end
-    return message
+    return oldPrint(...)
 end)
 
-hookfunction(warn, function(message)
+local oldWarn = warn
+hookfunction(warn, function(...)
+    local message = table.concat({...}, " ")
     if isBanRelated(message) then
         appendfile("log.txt", "BAN Detected: " .. message .. "\n")
     else
         appendfile("log.txt", "Warning Detected: " .. message .. "\n")
     end
-    return message
+    return oldWarn(...)
 end)
 
-hookfunction(error, function(message)
+local oldError = error
+hookfunction(error, function(...)
+    local message = table.concat({...}, " ")
     if isBanRelated(message) then
         appendfile("log.txt", "BAN Detected: " .. message .. "\n")
     else
         appendfile("log.txt", "Error Detected: " .. message .. "\n")
     end
-    return message
+    return oldError(...)
 end)
