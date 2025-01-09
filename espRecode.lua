@@ -1,7 +1,7 @@
 if game.PlaceId == 10228136016 then return end
 while not game:IsLoaded() do wait() end
 
-local Workspace, RunService, Players, CoreGui, Lighting = cloneref(game:GetService("Workspace")), cloneref(game:GetService("RunService")), cloneref(game:GetService("Players")), game:GetService("CoreGui"), cloneref(game:GetService("Lighting"))
+local Workspace, RunService, Players, CoreGui, Lighting = cloneref(game:GetService("Workspace")), cloneref(game:GetService("RunService")), cloneref(game:GetService("Players")), cloneref(game:GetService("CoreGui")), cloneref(game:GetService("Lighting"))
 
 local ESP = {
     Enabled = true,
