@@ -1,4 +1,4 @@
-local LogService = game:GetService("LogService")
+local LogService = cloneref(game:GetService("LogService"))
 
 appendfile("log.txt", "Log file created at: " .. os.date("%Y-%m-%d %H:%M:%S") .. "\n")
 
