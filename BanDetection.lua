@@ -1,5 +1,3 @@
-local LogService = cloneref(game:GetService("LogService"))
-
 appendfile("log.txt", "Log file created at: " .. os.date("%Y-%m-%d %H:%M:%S") .. "\n")
 
 local function isBanRelated(message)
@@ -40,12 +38,4 @@ hookfunction(error, function(message)
         appendfile("log.txt", "Error Detected: " .. message .. "\n")
     end
     return message
-end)
-
-LogService.MessageOut:Connect(function(message, messageType)
-    if isBanRelated(message) then
-        appendfile("log.txt", "BAN Detected: " .. message .. "\n")
-    else
-        appendfile("log.txt", messageType.Name .. ": " .. message .. "\n")
-    end
 end)
